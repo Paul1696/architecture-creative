@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Architecture Créative — Le blog de l'architecture et de l'ingénierie à Douala. Études de cas, innovation, conseils aux maîtres d'ouvrage.">
+  <title>Architecture Créative — Blog</title>
+  <link rel="stylesheet" href="assets/css/main.css?v=6">
+  <link rel="stylesheet" href="assets/css/blog.css?v=6">
+</head>
+<body>
+
+  <!-- HEADER (ArchDaily Style) -->
+  <header class="header" id="header">
+    
+    <!-- Top Row: Utility & Brand -->
+    <div class="header__top">
+      <div class="wrap">
+        <div class="header__top-left">
+          <a href="#">Soumettre un projet</a>
+          <a href="#">Annoncer</a>
+          <div class="header__sep"></div>
+          <a href="#" class="header__world"><span class="flag">🇨🇲</span> Monde</a>
+        </div>
+        
+        <div class="header__top-center">
+          <a href="index.html" class="header__logo">
+            <div class="header__logo-icon"></div>
+            <div class="header__logo-text">
+              <span>ARCHITECTURE</span>
+              <span>CREATIVE</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="header__top-right">
+          <a href="#" class="header__sub">S'abonner</a>
+          <div class="header__sep"></div>
+          <a href="#">Se connecter</a>
+          <a href="#" class="btn btn--blue btn--sm">S'inscrire</a>
+          <div class="header__sep"></div>
+          <button class="nav__burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Row: Categories -->
+    <div class="header__nav">
+      <div class="wrap">
+        <ul class="header__nav-list">
+          <li><a href="projets/index.html">Études de cas</a></li>
+          <div class="header__sep"></div>
+          <li><a href="innovation/index.html">Innovation</a></li>
+          <div class="header__sep"></div>
+          <li><a href="conseils/index.html">Conseils</a></li>
+          <div class="header__sep"></div>
+          <li><a href="#">Produits</a></li>
+          <div class="header__sep"></div>
+          <li><a href="#">Professionnels</a></li>
+          <div class="header__sep"></div>
+          <li><a href="#">Archive</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Search Row -->
+    <div class="header__search">
+      <div class="wrap">
+        <div class="search-bar">
+          <span class="search-bar__icon">🔍</span>
+          <input type="text" placeholder="Rechercher sur Architecture Creative..." aria-label="Rechercher">
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- FEATURED HERO — 2026 Split Layout -->
+  <section>
+    <a href="projets/suka-cafe.html" class="featured-hero">
+      <div class="featured-hero__bg">
+        <img src="assets/img/featured_suka.png" alt="SUKA Café interior">
+      </div>
+      <div class="featured-hero__content">
+        <div class="featured-hero__label">
+          <span class="eyebrow">À la une</span>
+        </div>
+        <h1 class="featured-hero__title">SUKA Café — Repenser l'aménagement intérieur</h1>
+        <p class="featured-hero__excerpt">Comment une analyse rigoureuse des flux a transformé un local en L de 85 m² en une machine à couverts fluide et rentable à Bonamoussadi.</p>
+        <div class="featured-hero__cta">Lire l'étude de cas</div>
+      </div>
+    </a>
+  </section>
+
+  <!-- CATEGORY STRIP -->
+  <div style="background:var(--white);position:sticky;top:var(--nav-h);z-index:100;">
+    <div class="wrap">
+      <div class="cat-strip">
+        <a href="index.html" class="cat-pill active">Tous <span class="cat-pill__n">8</span></a>
+        <a href="projets/index.html" class="cat-pill">Études de cas <span class="cat-pill__n">3</span></a>
+        <a href="innovation/index.html" class="cat-pill">Innovation <span class="cat-pill__n">2</span></a>
+        <a href="conseils/index.html" class="cat-pill">Conseils <span class="cat-pill__n">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DERNIERS ARTICLES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-bar">
+        <h2>Dernières publications</h2>
+        <a href="conseils/index.html">Tout voir</a>
+      </div>
+      
+      <div class="posts-grid">
+
+        <a href="projets/suka-cafe.html" class="post">
+          <div class="post__thumb">
+            <div class="post__thumb-bg"><img src="assets/img/featured_suka.png" style="width:100%;height:100%;object-fit:cover;"></div>
+          </div>
+          <div class="post__body">
+            <div class="post__cat">Étude de cas · Interior</div>
+            <h3 class="post__title">SUKA Café — Aménagement & Brand Identity</h3>
+            <p class="post__excerpt">Analyse des flux, repositionnement du comptoir et identité de marque coordonnée pour un café moderne.</p>
+            <div class="post__footer">
+              <span class="post__read">24 avr. 2026 · 7 min</span>
+              <span class="post__link">Lire</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projets/bicec.html" class="post">
+          <div class="post__thumb">
+            <div class="post__thumb-bg"><img src="assets/img/project_bicec.png" style="width:100%;height:100%;object-fit:cover;"></div>
+          </div>
+          <div class="post__body">
+            <div class="post__cat">Étude de cas · Tertiaire</div>
+            <h3 class="post__title">Agence BICEC — Mise aux normes ERP</h3>
+            <p class="post__excerpt">Diagnostic complet et coordination chantier pour une agence bancaire en activité à Douala.</p>
+            <div class="post__footer">
+              <span class="post__read">12 mars 2026 · 8 min</span>
+              <span class="post__link">Lire</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="innovation/article-ia.html" class="post">
+          <div class="post__thumb">
+            <div class="post__thumb-bg"><img src="assets/img/innovation_ia.png" style="width:100%;height:100%;object-fit:cover;"></div>
+          </div>
+          <div class="post__body">
+            <div class="post__cat">Innovation · Tech</div>
+            <h3 class="post__title">Estimation IA : Précision budgétaire avant chantier</h3>
+            <p class="post__excerpt">Comment l'IA permet d'arriver à ±3% de précision sur les budgets de construction.</p>
+            <div class="post__footer">
+              <span class="post__read">27 mars 2026 · 5 min</span>
+              <span class="post__link">Lire</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS SECTION (conseils) -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-bar">
+        <h2>Conseils aux Maîtres d'Ouvrage</h2>
+        <a href="conseils/index.html">Voir les guides</a>
+      </div>
+      
+      <div class="posts-grid--4">
+        
+        <a href="conseils/article-cctp.html" class="post">
+          <div class="post__thumb" style="aspect-ratio:1/1;">
+            <div class="post__thumb-bg"><img src="assets/img/conseils_tech.png" style="width:100%;height:100%;object-fit:cover;"></div>
+          </div>
+          <div class="post__body">
+            <div class="post__cat">Technique</div>
+            <h3 class="post__title" style="font-size:1.1rem;">CCTP et APS : Votre assurance malfaçons</h3>
+            <div class="post__footer">
+              <span class="post__read">10 avr. 2026</span>
+              <span class="post__link">Lire</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="conseils/article-manifeste.html" class="post">
+          <div class="post__thumb" style="aspect-ratio:1/1;background:#000;display:flex;align-items:center;justify-content:center;color:#fff;font-size:3rem;font-family:var(--f-head);">
+            AC
+          </div>
+          <div class="post__body">
+            <div class="post__cat">Stratégie</div>
+            <h3 class="post__title" style="font-size:1.1rem;">Pourquoi l'Architecture Créative est la clé</h3>
+            <div class="post__footer">
+              <span class="post__read">18 avr. 2026</span>
+              <span class="post__link">Lire</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Placeholder for next items -->
+        <div class="post" style="border: 1px dashed var(--border-mid); display:flex; align-items:center; justify-content:center; text-align:center; padding: 2rem;">
+          <p style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Dossier à venir<br>Réglementation 2026</p>
+        </div>
+
+        <div class="post" style="border: 1px dashed var(--border-mid); display:flex; align-items:center; justify-content:center; text-align:center; padding: 2rem;">
+          <p style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Dossier à venir<br>Matériaux Durables</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section">
+    <div class="wrap">
+      <div class="newsletter-block">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+          <div>
+            <h3>S'abonner à la revue</h3>
+            <p>Un article concret par mois sur l'architecture et l'ingénierie à Douala. Études de cas, conseils techniques et retours de chantier.</p>
+            <form class="newsletter-form" onsubmit="this.innerHTML='<p style=color:var(--blue);font-weight:700;>✓ INSCRIPTION CONFIRMÉE</p>';event.preventDefault();">
+              <input type="email" placeholder="votre@email.com" required>
+              <button type="submit" class="btn btn--primary">S'abonner</button>
+            </form>
+          </div>
+          <div style="font-family:var(--f-head); font-size:4rem; color:rgba(255,255,255,0.05); text-align:right;">
+            REVUE 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">ARCHITECTURE<span class="nav__logo-dot"></span>CREATIVE</div>
+          <p class="footer__about">Le blog de l'architecture et de l'ingénierie à Douala. Études de cas, outils, conseils aux maîtres d'ouvrage.</p>
+        </div>
+        <div>
+          <div class="footer__h">Sommaire</div>
+          <ul class="footer__links">
+            <li><a href="projets/index.html">Études de cas</a></li>
+            <li><a href="innovation/index.html">Innovation</a></li>
+            <li><a href="conseils/index.html">Conseils</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__h">À propos</div>
+          <ul class="footer__links">
+            <li><a href="contact/index.html">Contact</a></li>
+            <li><a href="#">Rosbri Group</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__h">Contact</div>
+          <ul class="footer__links">
+            <li><a href="#">Douala, Cameroun</a></li>
+            <li><a href="contact/index.html">Nous écrire</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 ARCHITECTURE CRÉATIVE — <a href="#">ROSBRI GROUP</a></span>
+        <span>DOUALA, CAMEROUN</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

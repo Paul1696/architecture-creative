@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(netlify --version)",
+      "Bash(npm install *)",
+      "Bash(netlify login *)",
+      "Bash(netlify deploy *)",
+      "Bash(node -e ' *)",
+      "Bash(npx netlify-cli *)",
+      "WebFetch(domain:www.archdaily.com)"
+    ]
+  }
+}
