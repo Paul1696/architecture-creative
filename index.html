@@ -20,8 +20,19 @@
   <meta name="twitter:title" content="Architecture Créative — Blog">
   <meta name="twitter:description" content="Le blog de l'architecture et de l'ingénierie à Douala.">
   <meta name="twitter:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/featured_suka.png">
-  <link rel="stylesheet" href="assets/css/main.css?v=33">
-  <link rel="stylesheet" href="assets/css/blog.css?v=33">
+  <link rel="stylesheet" href="assets/css/main.css?v=100">
+  <link rel="stylesheet" href="assets/css/blog.css?v=100">
+  <style>
+    /* Force single-line navigation & uppercase */
+    .header__nav-list { flex-wrap: nowrap !important; justify-content: center !important; }
+    .header__nav-list li a { 
+      white-space: nowrap !important; 
+      text-transform: uppercase !important; 
+      padding: 0 0.8rem !important; 
+      font-size: 0.76rem !important;
+    }
+    .header__nav-list li:not(:last-child)::after { margin-left: 0.8rem !important; }
+  </style>
 </head>
 <body>
 
