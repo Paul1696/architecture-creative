@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://architecture-creative.ateliersdepaul.com/sitemap.xml

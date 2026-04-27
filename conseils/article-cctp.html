@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Analytics -->
+  <script src="../assets/js/analytics.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CCTP et APS : votre meilleure assurance contre les malfaçons — Architecture Créative Blog, Douala.">
   <title>CCTP et APS — Architecture Créative</title>
-  <link rel="stylesheet" href="../assets/css/main.css?v=5">
-  <link rel="stylesheet" href="../assets/css/blog.css?v=5">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Architecture Créative">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="CCTP et APS : Votre assurance malfaçons">
+  <meta property="og:description" content="Pourquoi un CCTP et un APS bien rédigés sont votre meilleure protection contre les malfaçons sur chantier.">
+  <meta property="og:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/conseils_tech.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CCTP et APS : Votre assurance malfaçons">
+  <meta name="twitter:description" content="Comment se protéger des malfaçons grâce à des documents techniques bien rédigés.">
+  <meta name="twitter:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/conseils_tech.png">
+  <link rel="stylesheet" href="../assets/css/main.css?v=8">
+  <link rel="stylesheet" href="../assets/css/blog.css?v=8">
 </head>
 <body>
 
-  <nav class="nav" id="nav">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:100%;">
-      <a href="../index.html" class="nav__logo">Architecture<span class="nav__logo-dot"></span>Créative</a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="../projets/index.html">Études de cas</a></li>
-        <li><a href="../innovation/index.html">Innovation</a></li>
-        <li><a href="../conseils/index.html" class="active">Conseils</a></li>
-        <li><a href="../contact/index.html" class="nav__cta">Démarrer un projet</a></li>
-      </ul>
-      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <header class="article-header">
+  <div data-include="header"></div>
+<header class="article-header">
     <div class="wrap">
       <div class="breadcrumb">
         <a href="../index.html">Accueil</a>
@@ -83,6 +83,9 @@
         </ul>
         <p>Ce document est remis à toutes les entreprises qui remettent un devis. Il garantit que vous comparez des devis qui parlent <strong>exactement de la même chose</strong>.</p>
 
+        <h2 id="artec">La technologie au service du CCTP</h2>
+        <p>Chez <strong>Architecture Créative</strong>, nous utilisons des outils de génération automatisée (plateforme <em>Artec</em>) pour garantir une cohérence totale entre les plans 3D et le descriptif technique. Cette approche élimine les omissions classiques et permet de générer des documents de plus de 50 pages avec une précision chirurgicale sur les quantités et les références matériaux.</p>
+
         <h2 id="protection">Comment ils vous protègent concrètement</h2>
         <div class="phases">
           <div class="phase">
@@ -127,6 +130,24 @@
           </a>
         </div>
 
+        <!-- COMMENTAIRES -->
+        <section class="comments">
+          <h3 class="comments__title">Commentaires</h3>
+          <div class="comment-form-box">
+            <form class="comment-form" onsubmit="event.preventDefault(); alert('Merci ! Votre commentaire est en attente de modération.'); this.reset();">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="votre@email.com" required>
+              </div>
+              <textarea placeholder="Une question sur le CCTP ou l'APS ?" rows="4" required></textarea>
+              <button type="submit" class="btn btn--primary" style="margin-top:1rem;">Publier le commentaire</button>
+            </form>
+          </div>
+          <div class="comments-list">
+            <p style="color:var(--ink-soft); font-size:0.9rem; text-align:center;">Aucun commentaire pour le moment. Soyez le premier à réagir !</p>
+          </div>
+        </section>
+
       </article>
 
       <aside class="sidebar">
@@ -135,21 +156,21 @@
           <div class="author">
             <div class="author__avatar">👤</div>
             <div>
-              <div class="author__name">Architecture Créative</div>
-              <div class="author__role">Architecte · Ingénieur GC · Douala</div>
+              <div class="author__name">Rédaction Architecture Créative</div>
+              <div class="author__role">Blog Architecture & Design · Douala</div>
             </div>
           </div>
-          <p class="author__bio">Cabinet fondé sur une double compétence Architecture + Génie Civil. Projets à Douala depuis 2016.</p>
+          <p class="author__bio">Nous décryptons les aspects techniques de la construction pour aider les maîtres d'ouvrage au Cameroun.</p>
         </div>
 
         <div class="sidebar__block">
           <span class="sidebar__label">Dans cet article</span>
           <nav class="toc">
-            <a href="#probleme"><span class="toc__n">01</span>Le problème que ces documents résolvent</a>
+            <a href="#probleme"><span class="toc__n">01</span>Le problème résolu</a>
             <a href="#aps"><span class="toc__n">02</span>L'APS expliqué</a>
             <a href="#cctp"><span class="toc__n">03</span>Le CCTP expliqué</a>
-            <a href="#protection"><span class="toc__n">04</span>Comment ils vous protègent</a>
-            <a href="#projet"><span class="toc__n">05</span>Sur le projet SUKA Café</a>
+            <a href="#protection"><span class="toc__n">04</span>Comment ils protègent</a>
+            <a href="#projet"><span class="toc__n">05</span>Cas pratique SUKA</a>
           </nav>
         </div>
 
@@ -191,17 +212,7 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer__grid">
-        <div><div class="footer__logo">Architecture<span class="nav__logo-dot"></span>Créative</div><p class="footer__about">Le blog de l'architecture et de l'ingénierie à Douala.</p></div>
-        <div><div class="footer__h">Articles</div><ul class="footer__links"><li><a href="../projets/index.html">Études de cas</a></li><li><a href="../innovation/index.html">Innovation</a></li><li><a href="../conseils/index.html">Conseils</a></li></ul></div>
-        <div><div class="footer__h">À propos</div><ul class="footer__links"><li><a href="../contact/index.html">Démarrer un projet</a></li><li><a href="#">Rosbri Group</a></li></ul></div>
-        <div><div class="footer__h">Contact</div><ul class="footer__links"><li><a href="#">Douala, Cameroun</a></li><li><a href="../contact/index.html">Nous écrire</a></li></ul></div>
-      </div>
-      <div class="footer__bottom"><span>© 2026 Architecture Créative — <a href="#">Rosbri Group</a></span><span>Douala, Cameroun</span></div>
-    </div>
-  </footer>
-  <script src="../assets/js/main.js"></script>
+  <div data-include="footer"></div>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

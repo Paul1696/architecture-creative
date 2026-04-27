@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Analytics -->
+  <script src="../assets/js/analytics.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conseils aux maîtres d'ouvrage — Architecture Créative Blog, Douala.">
   <title>Conseils — Architecture Créative</title>
-  <link rel="stylesheet" href="../assets/css/main.css?v=5">
-  <link rel="stylesheet" href="../assets/css/blog.css?v=5">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Architecture Créative">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Conseils — Architecture Créative">
+  <meta property="og:description" content="Guides pratiques pour maîtres d'ouvrage : CCTP, APS, budget, choix d'entreprises.">
+  <meta property="og:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/conseils_tech.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conseils — Architecture Créative">
+  <meta name="twitter:description" content="Guides pratiques pour maîtres d'ouvrage à Douala.">
+  <meta name="twitter:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/conseils_tech.png">
+  <link rel="stylesheet" href="../assets/css/main.css?v=8">
+  <link rel="stylesheet" href="../assets/css/blog.css?v=8">
 </head>
 <body>
 
-  <nav class="nav" id="nav">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:100%;">
-      <a href="../index.html" class="nav__logo">Architecture<span class="nav__logo-dot"></span>Créative</a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="../projets/index.html">Études de cas</a></li>
-        <li><a href="../innovation/index.html">Innovation</a></li>
-        <li><a href="../conseils/index.html" class="active">Conseils</a></li>
-        <li><a href="../contact/index.html" class="nav__cta">Démarrer un projet</a></li>
-      </ul>
-      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <header class="article-header" style="padding-bottom:3rem;">
+  <div data-include="header"></div>
+<header class="article-header" style="padding-bottom:3rem;">
     <div class="wrap">
       <div class="breadcrumb">
         <a href="../index.html">Accueil</a>
@@ -34,7 +34,7 @@
       </div>
       <span class="eyebrow" style="color:rgba(100,150,255,.85);"><span style="background:rgba(100,150,255,.85);"></span>Archive</span>
       <h1>Conseils aux maîtres d'ouvrage</h1>
-      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Ce que votre architecte devrait vous dire — pour prendre de meilleures décisions avant, pendant et après votre chantier.</p>
+      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Ce que vous devriez savoir avant de construire — pour prendre de meilleures décisions avant, pendant et après votre chantier.</p>
     </div>
   </header>
 
@@ -51,8 +51,8 @@
           </div>
           <div class="post__body">
             <div class="post__date">18 avril 2026</div>
-            <div class="post__title">Pourquoi l'Architecture Créative est la clé des projets rentables aujourd'hui</div>
-            <p class="post__excerpt">Un architecte ne coûte pas de l'argent — il vous en fait économiser. Comment une conception rigoureuse change le rapport au budget.</p>
+            <div class="post__title">Pourquoi l'Architecture Créative est la clé des projets rentables</div>
+            <p class="post__excerpt">Un bon conseil ne coûte pas de l'argent — il vous en fait économiser. Comment une conception rigoureuse change le rapport au budget.</p>
             <div class="post__footer">
               <span class="post__read">⏱ 5 min</span>
               <span class="post__link">Lire →</span>
@@ -104,7 +104,7 @@
           </div>
           <div class="post__body">
             <div class="post__date">À venir</div>
-            <div class="post__title">3 astuces pour optimiser la lumière naturelle dans un bureau à Douala</div>
+            <div class="post__title">3 astuces pour optimiser la lumière naturelle dans un bureau</div>
             <p class="post__excerpt">Réduire la facture électrique et améliorer la productivité grâce à une conception solaire adaptée au climat tropical.</p>
             <div class="post__footer">
               <span class="post__read">⏱ ~4 min</span>
@@ -138,7 +138,7 @@
           </div>
           <div class="post__body">
             <div class="post__date">À venir</div>
-            <div class="post__title">Choisir ses entreprises de construction : les questions à poser avant de signer</div>
+            <div class="post__title">Choisir ses entreprises de construction : les questions à poser</div>
             <p class="post__excerpt">Devis, références, garanties — guide pratique pour maître d'ouvrage non-spécialiste à Douala.</p>
             <div class="post__footer">
               <span class="post__read">⏱ ~6 min</span>
@@ -161,16 +161,8 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer__grid">
-        <div><div class="footer__logo">Architecture<span class="nav__logo-dot"></span>Créative</div><p class="footer__about">Le blog de l'architecture et de l'ingénierie à Douala.</p></div>
-        <div><div class="footer__h">Articles</div><ul class="footer__links"><li><a href="../projets/index.html">Études de cas</a></li><li><a href="../innovation/index.html">Innovation</a></li><li><a href="../conseils/index.html">Conseils</a></li></ul></div>
-        <div><div class="footer__h">À propos</div><ul class="footer__links"><li><a href="../contact/index.html">Démarrer un projet</a></li><li><a href="#">Rosbri Group</a></li></ul></div>
-        <div><div class="footer__h">Contact</div><ul class="footer__links"><li><a href="#">Douala, Cameroun</a></li><li><a href="../contact/index.html">Nous écrire</a></li></ul></div>
-      </div>
-      <div class="footer__bottom"><span>© 2026 Architecture Créative — <a href="#">Rosbri Group</a></span><span>Douala, Cameroun</span></div>
-    </div>
+  <div data-include="footer"></div>
+</div>
   </footer>
   <script src="../assets/js/main.js"></script>
 </body>

@@ -9,7 +9,13 @@
       "Bash(netlify deploy *)",
       "Bash(node -e ' *)",
       "Bash(npx netlify-cli *)",
-      "WebFetch(domain:www.archdaily.com)"
+      "WebFetch(domain:www.archdaily.com)",
+      "Bash(python)",
+      "Bash(python -c ' *)",
+      "Bash(rm netlify.toml)",
+      "Bash(python -m markitdown \"C:/Users/JEREMY/Documents/SUKA/SUKA CAFE TERRASSE_5_APS_1_Presentation_26-03-21.pptx\")",
+      "Read(//c/tmp/**)",
+      "Bash(pip install *)"
     ]
   }
 }
