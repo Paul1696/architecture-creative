@@ -215,6 +215,47 @@ p  { color: var(--ink-mid); line-height: 1.8; }
 }
 .header__nav-list li a:hover { color: var(--blue); }
 
+
+/* Dropdown Logic */
+.has-dropdown { position: relative; }
+.dropdown-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--sh-md);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--t) var(--ease);
+  z-index: 1000;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.dropdown-menu li { width: 100%; text-align: left; }
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: var(--ink-mid) !important;
+  white-space: nowrap;
+  transition: background var(--t), color var(--t);
+}
+.dropdown-menu li a:hover {
+  background: var(--paper-alt);
+  color: var(--blue) !important;
+}
+.chevron { font-size: 0.6rem; opacity: 0.5; transition: transform var(--t); }
+.has-dropdown:hover .chevron { transform: rotate(180deg); }
+
 /* Row 3: Search */
 .header__search {
   padding: 1.25rem 0;
