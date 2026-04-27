@@ -208,7 +208,6 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
   list-style: none;
   flex-wrap: nowrap;
 }
@@ -222,16 +221,16 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   width: 1px;
   height: 12px;
   background: var(--border-mid);
-  opacity: 0.5;
-  opacity: 0.5;
-  margin-left: 3rem;
+  opacity: 0.4;
 }
 .header__nav-list li a {
   font-family: var(--f-body);
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--ink);
-  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 1.8rem;
   transition: color var(--t);
 }
 .header__nav-list li a:hover { color: var(--blue); }
