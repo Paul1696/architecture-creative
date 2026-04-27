@@ -155,18 +155,18 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   font-family: var(--f-body);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--white) !important;
-  background: var(--ink);
-  padding: 0.45rem 1rem;
-  border-radius: 3px;
+  color: #ffffff !important;
+  background: #1e3a8a;
+  padding: 0.42rem 1.1rem;
+  border-radius: 5px;
   text-decoration: none;
   white-space: nowrap;
-  margin-left: 0.75rem;
+  margin-left: 0.9rem;
   transition: background var(--t), transform var(--t);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 .header__btn-signup:hover {
-  background: var(--blue) !important;
+  background: #1d4ed8 !important;
   transform: translateY(-1px);
 }
 
