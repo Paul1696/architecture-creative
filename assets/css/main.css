@@ -200,7 +200,7 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   border-bottom: 1px solid var(--border);
 }
 .header__nav .wrap {
-  max-width: var(--wrap);
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -225,13 +225,13 @@ p  { color: var(--ink-mid); line-height: 1.8; }
 }
 .header__nav-list li a {
   font-family: var(--f-body);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--ink);
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   letter-spacing: 0.05em;
-  padding: 0 1.5rem;
-  white-space: nowrap;
+  padding: 0 1.2rem;
+  white-space: nowrap !important;
   transition: color var(--t);
 }
 .header__nav-list li a:hover { color: var(--blue); }
