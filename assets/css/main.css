@@ -200,23 +200,21 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   border-bottom: 1px solid var(--border);
 }
 .header__nav .wrap {
-  max-width: none;
-  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
   padding: 0 2rem;
 }
 .header__nav-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
   list-style: none;
   flex-wrap: nowrap;
-  width: 100%;
 }
 .header__nav-list li {
   display: flex;
   align-items: center;
-  flex: 1;
-  justify-content: center;
 }
 .header__nav-list li:not(:last-child)::after {
   content: '';
@@ -225,7 +223,8 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   height: 12px;
   background: var(--border-mid);
   opacity: 0.5;
-  margin-left: auto;
+  opacity: 0.5;
+  margin-left: 3rem;
 }
 .header__nav-list li a {
   font-family: var(--f-body);
