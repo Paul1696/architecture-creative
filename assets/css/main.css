@@ -148,6 +148,29 @@ p  { color: var(--ink-mid); line-height: 1.8; }
 }
 .header__top-left a:hover, .header__top-right a:hover { color: var(--blue); }
 
+/* Signup CTA button */
+.header__btn-signup {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--f-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--white) !important;
+  background: var(--ink);
+  padding: 0.45rem 1rem;
+  border-radius: 3px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: 0.75rem;
+  transition: background var(--t), transform var(--t);
+  letter-spacing: 0.04em;
+}
+.header__btn-signup:hover {
+  background: var(--blue) !important;
+  transform: translateY(-1px);
+}
+
+
 /* Logo */
 .header__logo {
   display: flex;
