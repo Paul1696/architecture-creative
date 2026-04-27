@@ -148,6 +148,12 @@ p  { color: var(--ink-mid); line-height: 1.8; }
 }
 .header__top-left a:hover, .header__top-right a:hover { color: var(--blue); }
 
+/* Ghost separator reset for auth area */
+.header__top-right > *::before, 
+.header__top-right > *::after { 
+  display: none !important; 
+}
+
 /* Signup CTA button */
 .header__btn-signup {
   display: inline-flex;
@@ -156,12 +162,12 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   font-size: 0.72rem;
   font-weight: 700;
   color: #ffffff !important;
-  background: #1e3a8a;
+  background: #1a3582;
   padding: 0.42rem 1.1rem;
   border-radius: 5px;
   text-decoration: none;
   white-space: nowrap;
-  margin-left: 0.9rem;
+  margin-left: 1.8rem;
   transition: background var(--t), transform var(--t);
   letter-spacing: 0.02em;
 }
