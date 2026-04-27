@@ -199,12 +199,31 @@ p  { color: var(--ink-mid); line-height: 1.8; }
   padding: 0.85rem 0;
   border-bottom: 1px solid var(--border);
 }
+.header__nav .wrap {
+  max-width: 100%;
+  padding: 0 4vw;
+}
 .header__nav-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
   flex-wrap: nowrap;
+}
+.header__nav-list li {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+.header__nav-list li:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: var(--border-mid);
+  opacity: 0.5;
+  margin-left: auto;
 }
 .header__nav-list li a {
   font-family: var(--f-body);
