@@ -1,7 +1,7 @@
 /* ── Partial loader ──────────────────────────────────────────── */
 async function loadPartial(slot, url) {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url + '?v=' + Date.now());
     if (!res.ok) throw new Error(res.status);
     slot.outerHTML = await res.text();
   } catch (e) {
