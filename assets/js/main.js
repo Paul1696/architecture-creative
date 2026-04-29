@@ -16,20 +16,34 @@ async function initPartials() {
     const name = slot.getAttribute('data-include');
     return loadPartial(slot, `/partials/${name}.html`);
   }));
+
+  await ensureMobileNav();
   
   // Initialize everything after partials are loaded
   initAuthVisibility();
-  initBlogContent();
   initHeader();
   initFooterAccordion();
   initActiveNav();
-  initReveal();
+  await initBlogContent();
   initAutoTOC();
   initSearch();
   initLightbox();
   initFormFeedback();
+  initReveal();
   initSEO();
   initCustomCursor();
+}
+
+async function ensureMobileNav() {
+  if (document.querySelector('.mobile-nav')) return;
+
+  try {
+    const res = await fetch('/partials/mobile-nav.html?v=' + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    document.body.insertAdjacentHTML('beforeend', await res.text());
+  } catch (e) {
+    console.warn('Mobile nav failed:', e);
+  }
 }
 
 /* ── Supabase Auth Visibility ─────────────────────────────── */
@@ -80,31 +94,51 @@ function escapeHtml(value = '') {
     .replace(/'/g, '&#039;');
 }
 
+function cleanInlineText(value = '') {
+  return String(value)
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<\/?[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function formatArticleBody(raw = '') {
   const lines = String(raw).split(/\r?\n/);
   const html = [];
   let list = [];
+  let stopped = false;
 
   const flushList = () => {
     if (!list.length) return;
-    html.push(`<ul>${list.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`);
+    html.push(`<ul>${list.map(item => `<li>${escapeHtml(cleanInlineText(item))}</li>`).join('')}</ul>`);
     list = [];
   };
 
   lines.forEach(line => {
+    if (stopped) return;
     const trimmed = line.trim();
-    if (!trimmed) {
+    if (/^(←|Étude de cas|<!-- COMMENTAIRES|Commentaires|Partager)/i.test(trimmed)) {
+      flushList();
+      stopped = true;
+      return;
+    }
+    if (!trimmed || trimmed.startsWith('<!--')) {
       flushList();
       return;
     }
     if (trimmed.startsWith('### ')) {
       flushList();
-      html.push(`<h3>${escapeHtml(trimmed.slice(4))}</h3>`);
+      const title = cleanInlineText(trimmed.slice(4));
+      if (title) html.push(`<h3>${escapeHtml(title)}</h3>`);
+      return;
+    }
+    if (trimmed === '###' || trimmed === '##') {
       return;
     }
     if (trimmed.startsWith('## ')) {
       flushList();
-      const title = trimmed.slice(3);
+      const title = cleanInlineText(trimmed.slice(3));
+      if (!title) return;
       const id = title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
       html.push(`<h2 id="${escapeHtml(id)}">${escapeHtml(title)}</h2>`);
       return;
@@ -114,7 +148,8 @@ function formatArticleBody(raw = '') {
       return;
     }
     flushList();
-    html.push(`<p>${escapeHtml(trimmed)}</p>`);
+    const text = cleanInlineText(trimmed);
+    if (text) html.push(`<p>${escapeHtml(text)}</p>`);
   });
 
   flushList();
@@ -149,14 +184,32 @@ function createPostCard(post) {
   return card;
 }
 
+function createEmptySectionState(section) {
+  const label = BLOG_SECTIONS[section] || 'Cette rubrique';
+  const container = document.createElement('div');
+  container.className = 'empty-state';
+  container.innerHTML = `
+    <div class="empty-state__mark">AC</div>
+    <h2>${escapeHtml(label)} arrive bientôt</h2>
+    <p>Cette rubrique est prête côté blog. Les premiers contenus seront publiés depuis l'espace admin.</p>
+    <div class="empty-state__actions">
+      <a class="btn btn--primary" href="/projets/">Lire les projets</a>
+      <a class="btn btn--secondary" href="/conseils/">Voir les conseils</a>
+    </div>
+  `;
+  return container;
+}
+
 async function renderBlogPostsList() {
   const grid = document.querySelector('#grid');
   if (!grid || typeof supabase === 'undefined') return;
 
   const section = window.location.pathname.split('/').filter(Boolean)[0] || 'accueil';
+  const hasStaticContent = grid.children.length > 0;
   
-  // Show loading state if needed
-  // grid.innerHTML = '<div class="loading">Chargement...</div>';
+  if (!hasStaticContent) {
+    grid.innerHTML = '<div class="blog-loading">Chargement des articles...</div>';
+  }
 
   let query = supabase.from('articles').select('*').eq('status', 'published');
   if (section !== 'accueil' && section !== 'index.html') {
@@ -170,22 +223,21 @@ async function renderBlogPostsList() {
 
   if (error) {
     console.warn('Erreur Supabase', error);
-    // If error, we keep static content as fallback
+    if (!hasStaticContent) {
+      grid.innerHTML = '';
+      grid.appendChild(createEmptySectionState(section));
+    }
     return;
   }
 
   if (posts && posts.length > 0) {
-    // If we have dynamic posts, we clear the static "placeholders"
     grid.innerHTML = '';
     posts.forEach(post => {
       grid.appendChild(createPostCard(post));
     });
-    
-    // Re-trigger reveal animations for new elements
-    if (typeof initReveal === 'function') initReveal();
-  } else {
-    // If no posts in DB, we keep the static ones or show a message
-    // console.log('Aucun article dynamique trouvé pour cette section.');
+  } else if (!hasStaticContent) {
+    grid.innerHTML = '';
+    grid.appendChild(createEmptySectionState(section));
   }
 }
 
@@ -257,9 +309,11 @@ async function renderArticle() {
   `;
 }
 
-function initBlogContent() {
-  renderBlogPostsList();
-  renderArticle();
+async function initBlogContent() {
+  await Promise.all([
+    renderBlogPostsList(),
+    renderArticle()
+  ]);
 }
 
 /* ── Header & Common UI ──────────────────────────────────────── */
@@ -456,7 +510,7 @@ async function saveContactMessage(form) {
 }
 
 function initFormFeedback() {
-  document.querySelectorAll('.newsletter-form').forEach(form => {
+  document.querySelectorAll('.newsletter-form, .newsletter-form-footer').forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
