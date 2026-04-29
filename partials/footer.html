@@ -1,32 +1,86 @@
 <footer class="footer">
   <div class="wrap">
-    <div class="footer__grid">
-      <div>
-        <div class="footer__logo">ARCHITECTURE<span class="nav__logo-dot"></span>CREATIVE</div>
-        <p class="footer__about">Revue d'Architecture, Ingénierie & Laboratoire d'Idées. Une plateforme de dialogue multidisciplinaire sur l'espace et l'habitat.</p>
+    <div class="footer-grid">
+      <!-- Column 1: Brand -->
+      <div class="footer-col">
+        <div class="logo footer-logo">
+          <div class="logo-icon"></div>
+          <div class="logo-text">
+            <span>ARCHITECTURE</span>
+            <span>CREATIVE</span>
+          </div>
+        </div>
+        <p class="footer-about">Laboratoire d'idées & revue d'inspiration dédiée à l'architecture et à la ville.</p>
+        <div class="footer-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>CM Douala</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22s1.5-2 1.5-4c0-1.5-.5-2-1-3.5C7.5 12 9 10 11 10c2.5 0 4.5 2 4.5 4.5 0 3-2 5.5-5 5.5-1.5 0-3-1-3.5-2.5C6.5 16 6 14.5 6 13c0-4 3.5-7 8-7 4.5 0 8 3 8 7 0 5-4 9-9 9-1.5 0-3-.5-4-1.5z"></path></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg></a>
+        </div>
       </div>
-      <div>
-        <div class="footer__h">Revue</div>
-        <ul class="footer__links">
-          <li><a href="dossiers/index.html">Dossiers de fond</a></li>
-          <li><a href="entretiens/index.html">Entretiens</a></li>
-          <li><a href="guides/index.html">Guides de la ville</a></li>
-          <li><a href="nouvelles/index.html">Le Pouls (News)</a></li>
+
+      <!-- Column 2: Navigation -->
+      <div class="footer-col accordion-item">
+        <div class="footer-h accordion-header">Navigation <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        <ul class="footer-links accordion-content">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/dossiers/">Dossiers</a></li>
+          <li><a href="/entretiens/">Entretiens</a></li>
+          <li><a href="/guides/">Guides de la ville</a></li>
+          <li><a href="/nouvelles/">Nouvelles</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/ecriture/">Écriture</a></li>
+          <li><a href="/developpement/">Développement</a></li>
+          <li><a href="/annuaire/">Annuaire</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
-      <div>
-        <div class="footer__h">S'impliquer</div>
-        <ul class="footer__links">
-          <li><a href="publications/index.html">Publications</a></li>
-          <li><a href="ressources/bibliotheque-3d.html">Bibliothèque 3D</a></li>
-          <li><a href="annuaire/index.html">Répertoire des Bâtisseurs</a></li>
-          <li><a href="conseils/article-manifeste.html">Le Manifeste</a></li>
+
+      <!-- Column 3: Ressources -->
+      <div class="footer-col accordion-item">
+        <div class="footer-h accordion-header">Ressources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        <ul class="footer-links accordion-content">
+          <li><a href="/ressources/">Bibliothèque 3D</a></li>
+          <li><a href="/ressources/">Centre de doc</a></li>
+          <li><a href="/annuaire/">Répertoire</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/ressources/">Cartes & données</a></li>
+          <li><a href="/contact/">Appels & concours</a></li>
         </ul>
+      </div>
+
+      <!-- Column 4: Compte -->
+      <div class="footer-col accordion-item">
+        <div class="footer-h accordion-header">Compte <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+        <ul class="footer-links accordion-content">
+          <li><a href="/#newsletter" class="icon-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> S'abonner</a></li>
+          <li><a href="/profil.html" class="icon-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Se connecter</a></li>
+          <li style="margin-top: 1rem;"><a href="/profil.html" class="btn btn--primary btn--sm icon-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> S'inscrire</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: Newsletter -->
+      <div class="footer-col">
+        <div class="footer-h">Newsletter</div>
+        <p class="footer-about">Recevez nos nouveaux articles, guides et sélections.</p>
+        <form class="newsletter-form-footer">
+          <input type="email" placeholder="Votre adresse email" required>
+          <button type="submit" class="btn btn--primary">S'abonner</button>
+        </form>
       </div>
     </div>
-    <div class="footer__bottom">
-      <span>© 2026 ARCHITECTURE CRÉATIVE — ROSBRI GROUP</span>
-      <span>DOUALA, CAMEROUN</span>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2026 Architecture Creative. Tous droits réservés.</div>
+      <div class="footer-legal">
+        <a href="/contact/">Mentions légales</a>
+        <a href="/contact/">Confidentialité</a>
+        <a href="/contact/">Conditions d'utilisation</a>
+      </div>
     </div>
   </div>
 </footer>

@@ -3,16 +3,11 @@
     "allow": [
       "mcp__Claude_Preview__preview_start",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
-      "Bash(netlify --version)",
       "Bash(npm install *)",
-      "Bash(netlify login *)",
-      "Bash(netlify deploy *)",
       "Bash(node -e ' *)",
-      "Bash(npx netlify-cli *)",
       "WebFetch(domain:www.archdaily.com)",
       "Bash(python)",
       "Bash(python -c ' *)",
-      "Bash(rm netlify.toml)",
       "Bash(python -m markitdown \"C:/Users/JEREMY/Documents/SUKA/SUKA CAFE TERRASSE_5_APS_1_Presentation_26-03-21.pptx\")",
       "Read(//c/tmp/**)",
       "Bash(pip install *)"

@@ -8,20 +8,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Analyses & Explorations — Architecture Créative. Recherche sur l'espace, typologies urbaines et anatomie des constructions.">
-  <title>Explorations — Architecture Créative</title>
+  <title>Architecture — Architecture Créative</title>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Architecture Créative">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Analyses & Explorations — Architecture Créative">
+  <meta property="og:title" content="Projets Architecture — Architecture Créative">
   <meta property="og:description" content="Projets d'aménagement, ERP et conception à Douala. Retours de chantier et méthodes.">
   <meta property="og:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/featured_suka.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Analyses & Explorations — Architecture Créative">
+  <meta name="twitter:title" content="Projets Architecture — Architecture Créative">
   <meta name="twitter:description" content="Déconstruction de l'espace bâti et typologies urbaines à Douala.">
   <meta name="twitter:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/featured_suka.png">
-  <link rel="stylesheet" href="assets/css/main.css?v=9">
-  <link rel="stylesheet" href="assets/css/blog.css?v=9">
+  <link rel="stylesheet" href="assets/css/main.css?v=204">
+  <link rel="stylesheet" href="assets/css/blog.css?v=204">
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
 </head>
 <body>
 
@@ -31,9 +34,9 @@
       <div class="breadcrumb">
         <a href="index.html">Accueil</a>
         <span class="breadcrumb__sep">/</span>
-        <span>Explorations</span>
+        <span>Architecture</span>
       </div>
-      <h1>Analyses & Explorations</h1>
+      <h1>Projets Architecture</h1>
       <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Une déconstruction de l'espace bâti — du brief philosophique à la matérialité finale.</p>
     </div>
   </header>
@@ -174,7 +177,8 @@
   </div>
 
   <div data-include="footer"></div>
-<script src="assets/js/main.js"></script>
+  <div data-include="mobile-nav"></div>
+  <script src="assets/js/main.js"></script>
   <script>
     document.querySelectorAll('.filter').forEach(btn => {
       btn.addEventListener('click', () => {

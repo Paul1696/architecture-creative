@@ -8,10 +8,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Répertoire des Bâtisseurs — Architecture Créative. Annuaire des artisans et entreprises du BTP au Cameroun et à l'international.">
-  <title>Répertoire des Bâtisseurs — Architecture Créative</title>
+  <title>Annuaire entrepreneurs & artisans — Architecture Créative</title>
 
-  <link rel="stylesheet" href="assets/css/main.css?v=10">
-  <link rel="stylesheet" href="assets/css/blog.css?v=10">
+  <link rel="stylesheet" href="assets/css/main.css?v=204">
+  <link rel="stylesheet" href="assets/css/blog.css?v=204">
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
 </head>
 <body>
 
@@ -24,9 +27,9 @@
         <span class="breadcrumb__sep">/</span>
         <span>Annuaire</span>
       </div>
-      <span class="eyebrow" style="color:var(--blue);"><span style="background:var(--blue);"></span>Index des Partenaires</span>
-      <h1>Répertoire des Bâtisseurs</h1>
-      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Valorisation du savoir-faire local. Une plateforme de mise en relation avec les artisans et entreprises de qualité.</p>
+      <span class="eyebrow" style="color:var(--blue);">Index des partenaires</span>
+      <h1>Annuaire entrepreneurs & artisans</h1>
+      <p style="color:rgba(255,255,255,.5);max-width:640px;font-size:1rem;margin-top:.5rem;">Retrouvez les contacts d'entrepreneurs, artisans et ateliers de confiance pour les projets d'architecture, d'aménagement et de construction.</p>
     </div>
   </header>
 
@@ -39,18 +42,125 @@
         <button class="filter">International</button>
       </div>
 
-      <div class="grid-3">
-        <div class="card reveal" style="padding:2rem; border:1px solid var(--border);">
-          <div style="font-size:0.7rem; color:var(--blue); font-weight:700; margin-bottom:0.5rem;">Artisans Terre Cuite · Ouest</div>
-          <h3>Briquetterie Artisanale de Foumban</h3>
-          <p style="font-size:0.9rem; margin-top:0.5rem;">Spécialistes du moulage traditionnel et de la cuisson au feu de bois.</p>
-          <a href="#" class="btn btn--sm" style="margin-top:1.5rem;">Voir la fiche contact</a>
+      <div class="grid-3 reveal--stagger">
+        <div class="card directory-card">
+          <div class="directory-card__top">
+            <div class="directory-card__meta">Maçonnerie · Gros œuvre</div>
+            <span class="directory-card__status">À vérifier</span>
+          </div>
+          <div>
+            <h3>Entreprise générale BTP</h3>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">Entrepreneur pour fondations, élévations, dalle béton et suivi de chantier.</p>
+          </div>
+          <div class="directory-card__contacts">
+            <div class="directory-contact"><strong>Zone</strong><span>Douala · Littoral</span></div>
+            <div class="directory-contact"><strong>Téléphone</strong><span>À compléter</span></div>
+            <div class="directory-contact"><strong>Email</strong><span>À compléter</span></div>
+          </div>
+          <div class="directory-actions">
+            <a href="/contact/" class="btn btn--primary btn--sm">Demander le contact</a>
+            <a href="/contact/" class="btn btn--secondary btn--sm">Proposer une fiche</a>
+          </div>
         </div>
-        <div class="card reveal d1" style="padding:2rem; border:1px solid var(--border);">
-          <div style="font-size:0.7rem; color:var(--blue); font-weight:700; margin-bottom:0.5rem;">Ferronnerie d'art · Douala</div>
-          <h3>Ateliers de Forge du Wouri</h3>
-          <p style="font-size:0.9rem; margin-top:0.5rem;">Travail du métal sur mesure pour garde-corps et structures légères.</p>
-          <a href="#" class="btn btn--sm" style="margin-top:1.5rem;">Voir la fiche contact</a>
+
+        <div class="card directory-card">
+          <div class="directory-card__top">
+            <div class="directory-card__meta">Ferronnerie · Métal</div>
+            <span class="directory-card__status">À vérifier</span>
+          </div>
+          <div>
+            <h3>Atelier de ferronnerie</h3>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">Fabrication de garde-corps, portails, escaliers, pergolas et structures légères.</p>
+          </div>
+          <div class="directory-card__contacts">
+            <div class="directory-contact"><strong>Zone</strong><span>Douala · Bonaberi</span></div>
+            <div class="directory-contact"><strong>Téléphone</strong><span>À compléter</span></div>
+            <div class="directory-contact"><strong>Email</strong><span>À compléter</span></div>
+          </div>
+          <div class="directory-actions">
+            <a href="/contact/" class="btn btn--primary btn--sm">Demander le contact</a>
+            <a href="/contact/" class="btn btn--secondary btn--sm">Proposer une fiche</a>
+          </div>
+        </div>
+
+        <div class="card directory-card">
+          <div class="directory-card__top">
+            <div class="directory-card__meta">Menuiserie · Bois</div>
+            <span class="directory-card__status">À vérifier</span>
+          </div>
+          <div>
+            <h3>Menuisier agenceur</h3>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">Mobilier sur mesure, habillages muraux, comptoirs, portes et aménagement intérieur.</p>
+          </div>
+          <div class="directory-card__contacts">
+            <div class="directory-contact"><strong>Zone</strong><span>Douala · Yaoundé</span></div>
+            <div class="directory-contact"><strong>Téléphone</strong><span>À compléter</span></div>
+            <div class="directory-contact"><strong>Email</strong><span>À compléter</span></div>
+          </div>
+          <div class="directory-actions">
+            <a href="/contact/" class="btn btn--primary btn--sm">Demander le contact</a>
+            <a href="/contact/" class="btn btn--secondary btn--sm">Proposer une fiche</a>
+          </div>
+        </div>
+
+        <div class="card directory-card">
+          <div class="directory-card__top">
+            <div class="directory-card__meta">Électricité · Courants faibles</div>
+            <span class="directory-card__status">À vérifier</span>
+          </div>
+          <div>
+            <h3>Électricien bâtiment</h3>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">Installation électrique, tableaux, luminaires, réseau, sécurité et maintenance.</p>
+          </div>
+          <div class="directory-card__contacts">
+            <div class="directory-contact"><strong>Zone</strong><span>Douala · Centre</span></div>
+            <div class="directory-contact"><strong>Téléphone</strong><span>À compléter</span></div>
+            <div class="directory-contact"><strong>Email</strong><span>À compléter</span></div>
+          </div>
+          <div class="directory-actions">
+            <a href="/contact/" class="btn btn--primary btn--sm">Demander le contact</a>
+            <a href="/contact/" class="btn btn--secondary btn--sm">Proposer une fiche</a>
+          </div>
+        </div>
+
+        <div class="card directory-card">
+          <div class="directory-card__top">
+            <div class="directory-card__meta">Plomberie · Sanitaire</div>
+            <span class="directory-card__status">À vérifier</span>
+          </div>
+          <div>
+            <h3>Plombier sanitaire</h3>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">Réseaux d'eau, évacuations, appareils sanitaires, bâches à eau et dépannage.</p>
+          </div>
+          <div class="directory-card__contacts">
+            <div class="directory-contact"><strong>Zone</strong><span>Douala · Bonamoussadi</span></div>
+            <div class="directory-contact"><strong>Téléphone</strong><span>À compléter</span></div>
+            <div class="directory-contact"><strong>Email</strong><span>À compléter</span></div>
+          </div>
+          <div class="directory-actions">
+            <a href="/contact/" class="btn btn--primary btn--sm">Demander le contact</a>
+            <a href="/contact/" class="btn btn--secondary btn--sm">Proposer une fiche</a>
+          </div>
+        </div>
+
+        <div class="card directory-card">
+          <div class="directory-card__top">
+            <div class="directory-card__meta">Finitions · Peinture</div>
+            <span class="directory-card__status">À vérifier</span>
+          </div>
+          <div>
+            <h3>Artisan finitions</h3>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">Enduits, peinture, revêtements muraux, microciment et reprises de finition.</p>
+          </div>
+          <div class="directory-card__contacts">
+            <div class="directory-contact"><strong>Zone</strong><span>Douala · Cameroun</span></div>
+            <div class="directory-contact"><strong>Téléphone</strong><span>À compléter</span></div>
+            <div class="directory-contact"><strong>Email</strong><span>À compléter</span></div>
+          </div>
+          <div class="directory-actions">
+            <a href="/contact/" class="btn btn--primary btn--sm">Demander le contact</a>
+            <a href="/contact/" class="btn btn--secondary btn--sm">Proposer une fiche</a>
+          </div>
         </div>
       </div>
 

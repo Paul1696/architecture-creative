@@ -1,58 +1,58 @@
-<header class="header" id="header">
+<header class="header">
+  <div class="wrap">
+    <!-- Mobile Burger (Left) -->
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
 
-  <div class="header__top">
-    <div class="wrap">
-      <div class="header__top-left">
-        <span class="header__world">Laboratoire d'idées & Revue d'inspiration</span>
-        <div class="header__sep"></div>
-        <span class="header__world"><span class="flag">🇨🇲</span> Douala</span>
+    <!-- Logo (Center on Mobile, Left on Desktop) -->
+    <a href="/" class="logo">
+      <div class="logo-icon"></div>
+      <div class="logo-text">
+        <span>ARCHITECTURE</span>
+        <span>CREATIVE</span>
       </div>
+    </a>
 
-      <div class="header__top-center">
-        <a href="/index.html" class="header__logo">
-          <div class="header__logo-icon"></div>
-          <div class="header__logo-text">
-            <span>ARCHITECTURE</span>
-            <span>CREATIVE</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="header__top-right">
-        <a href="#newsletter" class="header__sub">S'abonner</a>
-        <div class="header__sep"></div>
-        <a href="connexion.html" class="header__sub">Se connecter</a>
-        <a href="inscription.html" class="header__btn-signup header__btn-cta">S'inscrire</a>
-        <button class="nav__burger" id="burger" aria-label="Menu" style="margin-left:1.2rem">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="header__nav">
-    <div class="wrap">
-      <ul class="header__nav-list">
-        <li><a href="index.html" data-nav="accueil">Accueil</a></li>
-        <li><a href="dossiers/index.html" data-nav="dossiers">Dossiers</a></li>
-        <li><a href="entretiens/index.html" data-nav="entretiens">Entretiens</a></li>
-        <li><a href="guides/index.html" data-nav="guides">Guides de la ville</a></li>
-        <li><a href="nouvelles/index.html" data-nav="nouvelles">Nouvelles</a></li>
-        <li><a href="publications/index.html" data-nav="publications">Publications</a></li>
-        <li><a href="ressources/bibliotheque-3d.html" data-nav="3d">Bibliothèque 3D</a></li>
-        <li><a href="ressources/centre-documentation.html" data-nav="doc">Centre de Doc</a></li>
-        <li><a href="annuaire/index.html" data-nav="annuaire">Répertoire</a></li>
+    <!-- Desktop Nav (Hidden on Mobile) -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="/" class="nav-link">Accueil</a></li>
+        <li><a href="/projets/" class="nav-link">Architecture</a></li>
+        <li><a href="/dossiers/" class="nav-link">Dossiers</a></li>
+        <li><a href="/entretiens/" class="nav-link">Entretiens</a></li>
+        <li><a href="/guides/" class="nav-link">Guides de la ville</a></li>
+        <li><a href="/conseils/" class="nav-link">Conseils</a></li>
+        <li><a href="/nouvelles/" class="nav-link">Nouvelles</a></li>
+        <li><a href="/publications/" class="nav-link">Publications</a></li>
+        <li><a href="/ecriture/" class="nav-link">Écriture</a></li>
+        <li><a href="/developpement/" class="nav-link">Développement</a></li>
+        <li><a href="/ressources/" class="nav-link">Ressources</a></li>
+        <li><a href="/annuaire/" class="nav-link">Annuaire</a></li>
+        <li><a href="/contact/" class="nav-link">Contact</a></li>
+        <li><a href="/admin/" class="nav-link admin-only hidden">Admin</a></li>
       </ul>
-    </div>
-  </div>
-
-  <div class="header__search">
-    <div class="wrap">
-      <div class="search-bar">
-        <span class="search-bar__icon">🔍</span>
-        <input type="text" placeholder="Rechercher sur Architecture Creative..." aria-label="Rechercher">
+      <div class="nav-auth">
+        <a href="/#newsletter" class="nav-link">S'abonner</a>
+        <a href="/profil.html" class="nav-link">Se connecter</a>
+        <a href="/profil.html" class="btn btn--primary btn--sm">S'inscrire</a>
       </div>
+    </nav>
+
+    <!-- Actions (Right) -->
+    <div class="header-actions">
+      <a href="#newsletter" class="nav-link hide-mobile">S'abonner</a>
+      <a href="/profil.html" class="nav-link hide-mobile">Se connecter</a>
+      <a href="/profil.html" class="btn btn--primary btn--sm hide-mobile">S'inscrire</a>
+      <button class="search-trigger" aria-label="Rechercher">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
     </div>
   </div>
-
+  <div class="site-search" aria-hidden="true">
+    <div class="wrap site-search__inner">
+      <input type="search" placeholder="Rechercher un article, un guide, une ressource..." aria-label="Rechercher">
+      <button class="site-search__close" aria-label="Fermer la recherche">&times;</button>
+    </div>
+  </div>
 </header>

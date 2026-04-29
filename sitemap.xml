@@ -41,6 +41,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://architecture-creative.ateliersdepaul.com/ecriture/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://architecture-creative.ateliersdepaul.com/developpement/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://architecture-creative.ateliersdepaul.com/contact/index.html</loc>
     <priority>0.6</priority>
   </url>

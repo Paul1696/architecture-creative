@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <base href="/">
-  <!-- Analytics -->
-  <script src="assets/js/analytics.js"></script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Guides de la ville — Architecture Créative. Parcours architecturaux et sélections de lieux inspirants.">
-  <title>Guides de la ville — Architecture Créative</title>
-
-  <link rel="stylesheet" href="assets/css/main.css?v=10">
-  <link rel="stylesheet" href="assets/css/blog.css?v=10">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides de la ville — Architecture Créative</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/assets/js/supabase-config.js"></script>
 </head>
 <body>
+    <div data-include="header"></div>
 
-  <div data-include="header"></div>
+    <main>
+        <header class="section section--alt">
+            <div class="wrap reveal">
+                <nav class="breadcrumb">
+                    <a href="/">Accueil</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <span>Guides</span>
+                </nav>
+                <h1 class="hero-title">Guides de la ville</h1>
+                <p class="hero-text">Explorez l'architecture urbaine à travers nos guides détaillés des plus grandes métropoles.</p>
+            </div>
+        </header>
 
-  <header class="article-header" style="padding-bottom:3rem;">
-    <div class="wrap">
-      <div class="breadcrumb">
-        <a href="index.html">Accueil</a>
-        <span class="breadcrumb__sep">/</span>
-        <span>Guides</span>
-      </div>
-      <span class="eyebrow" style="color:var(--blue);"><span style="background:var(--blue);"></span>Inspiration Terrain</span>
-      <h1>Guides de la ville</h1>
-      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Parcours architecturaux et sélections de lieux esthètes à Douala et ailleurs. L'architecture vécue au quotidien.</p>
-    </div>
-  </header>
+        <section class="section">
+            <div class="wrap">
+                <div class="grid-3 reveal--stagger" id="grid">
+                    <article class="card">
+                        <img src="/assets/img/project_bicec.png" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Guide</span>
+                            <h3 class="card-title">Douala : Hier et Aujourd'hui</h3>
+                            <p class="card-text">Un parcours architectural entre patrimoine colonial et modernisme.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="/assets/img/hero_vitrine.png" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Guide</span>
+                            <h3 class="card-title">Paris : Le Nouveau Brutalisme</h3>
+                            <p class="card-text">Guide des chefs-d'œuvre de béton de la capitale.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <section class="section" style="background:var(--paper);">
-    <div class="wrap">
-      <div class="grid-2">
-        <div class="card reveal">
-          <div class="card__img" style="aspect-ratio:16/9;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('assets/img/city_guide_douala.jpg');background-size:cover;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.5rem;">DOUALA</div>
-          <div class="card__body" style="padding:1.5rem;">
-            <h3>Circuit : Le modernisme tropical de Douala</h3>
-            <p>Un parcours à travers Akwa et Bonanjo pour découvrir les pépites de l'architecture des années 50 à 70.</p>
-            <a href="#" class="btn btn--sm" style="margin-top:1rem;">Voir le parcours</a>
-          </div>
-        </div>
-        <div class="card reveal d1">
-          <div class="card__img" style="aspect-ratio:16/9;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('assets/img/city_guide_kribi.jpg');background-size:cover;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.5rem;">KRIBI</div>
-          <div class="card__body" style="padding:1.5rem;">
-            <h3>L'architecture de bord de mer : Réinventer le balnéaire</h3>
-            <p>Sélection de villas et lodges qui intègrent parfaitement le paysage côtier camerounais.</p>
-            <a href="#" class="btn btn--sm" style="margin-top:1rem;">Voir le parcours</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div data-include="newsletter"></div>
+    </main>
 
-  <div data-include="footer"></div>
-  <script src="assets/js/main.js"></script>
+    <div data-include="footer"></div>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

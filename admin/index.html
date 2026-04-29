@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin articles — Architecture Créative</title>
+  <link rel="stylesheet" href="assets/css/main.css?v=204">
+  <link rel="stylesheet" href="assets/css/blog.css?v=204">
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <style>
+    /* Admin Login Overlay */
+    #adminAuthOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .auth-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .auth-card h2 { margin-bottom: 0.5rem; }
+    .auth-card p { margin-bottom: 2rem; color: #666; font-size: 0.9rem; }
+    .auth-form { display: flex; flex-direction: column; gap: 1rem; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <!-- Login Overlay -->
+  <div id="adminAuthOverlay" class="hidden">
+    <div class="auth-card">
+      <h2>Connexion Admin</h2>
+      <p>Seul l'administrateur peut modifier le blog.</p>
+      <form class="auth-form" id="adminLoginForm">
+        <input class="form-input" type="email" id="authEmail" placeholder="Email" required>
+        <input class="form-input" type="password" id="authPassword" placeholder="Mot de passe" required>
+        <button type="submit" class="btn btn--primary">Se connecter</button>
+        <div id="authError" style="color: #e11d48; font-size: 0.8rem; margin-top: 0.5rem;"></div>
+      </form>
+    </div>
+  </div>
+
+  <div data-include="header"></div>
+
+  <main>
+    <header class="article-header admin-hero">
+      <div class="wrap">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Admin</span>
+        </div>
+        <h1>Publier un article</h1>
+        <p>Gérez les contenus du blog via Supabase. Vos modifications sont publiées en temps réel.</p>
+        <button id="adminLogout" class="btn btn--secondary btn--sm" style="margin-top: 1rem;">Se déconnecter</button>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap admin-layout">
+        <form class="admin-panel" id="adminPostForm">
+          <div class="admin-panel__head">
+            <h2>Nouvel article</h2>
+            <span id="adminStatus">Prêt</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="postTitle">Titre</label>
+              <input class="form-input" id="postTitle" name="title" type="text" placeholder="Titre de l'article" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="postSection">Rubrique</label>
+                <select class="form-select" id="postSection" name="section">
+                  <option value="conseils">Conseils</option>
+                  <option value="dossiers">Dossiers</option>
+                  <option value="nouvelles">Nouvelles</option>
+                  <option value="guides">Guides</option>
+                  <option value="entretiens">Entretiens</option>
+                  <option value="publications">Publications</option>
+                  <option value="ressources">Ressources</option>
+                  <option value="innovation">Lab R&D</option>
+                  <option value="projets">Explorations</option>
+                  <option value="ecriture">Écriture</option>
+                  <option value="developpement">Développement</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="postCategory">Étiquette</label>
+                <input class="form-input" id="postCategory" name="category" type="text" placeholder="Technique, stratégie, guide...">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="postReadTime">Temps de lecture</label>
+                <input class="form-input" id="postReadTime" name="readTime" type="text" placeholder="6 min">
+              </div>
+              <div class="form-group">
+                <label for="postIcon">Icône</label>
+                <input class="form-input" id="postIcon" name="icon" type="text" placeholder="✍">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="postImage">Image de couverture</label>
+              <input class="form-input" id="postImage" name="image" type="url" placeholder="https://... ou /assets/img/...">
+            </div>
+
+            <div class="form-group">
+              <label for="postExcerpt">Résumé</label>
+              <textarea class="form-textarea" id="postExcerpt" name="excerpt" rows="3" placeholder="Résumé court affiché sur la carte" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="postContent">Contenu</label>
+              <textarea class="form-textarea admin-editor" id="postContent" name="content" rows="16" placeholder="Utilisez ## pour un grand titre, ### pour un sous-titre et - pour une liste." required></textarea>
+            </div>
+          </div>
+
+          <div class="admin-actions">
+            <button type="submit" class="btn btn--primary" data-action="published">Publier</button>
+            <button type="submit" class="btn btn--secondary" data-action="draft">Enregistrer brouillon</button>
+            <button type="button" class="btn btn--secondary" id="resetAdminForm">Nouveau</button>
+          </div>
+        </form>
+
+        <aside class="admin-panel admin-side">
+          <div class="admin-panel__head">
+            <h2>Articles Supabase</h2>
+            <span id="postCount">0</span>
+          </div>
+          <div class="admin-list" id="adminPostList"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/js/main.js?v=204"></script>
+  <script src="assets/js/admin.js?v=207"></script>
+</body>
+</html>

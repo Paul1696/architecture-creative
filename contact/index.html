@@ -19,8 +19,11 @@
   <meta name="twitter:title" content="Contact — Architecture Créative">
   <meta name="twitter:description" content="Démarrez votre projet à Douala.">
   <meta name="twitter:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/featured_suka.png">
-  <link rel="stylesheet" href="../assets/css/main.css?v=8">
-  <link rel="stylesheet" href="../assets/css/blog.css?v=8">
+  <link rel="stylesheet" href="../assets/css/main.css?v=204">
+  <link rel="stylesheet" href="../assets/css/blog.css?v=204">
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../assets/js/supabase-config.js"></script>
 </head>
 <body>
 
@@ -154,14 +157,5 @@
 
   <div data-include="footer"></div>
 <script src="../assets/js/main.js"></script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('button[type="submit"]');
-      btn.innerHTML = 'Message envoyé ✓';
-      btn.style.background = 'var(--success)';
-      btn.disabled = true;
-    });
-  </script>
 </body>
 </html>

@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <base href="/">
-  <!-- Analytics -->
-  <script src="assets/js/analytics.js"></script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Publications — Architecture Créative. Recension de livres, revues et manifestes fondamentaux pour la culture architecturale.">
-  <title>Publications — Architecture Créative</title>
-
-  <link rel="stylesheet" href="assets/css/main.css?v=10">
-  <link rel="stylesheet" href="assets/css/blog.css?v=10">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications — Architecture Créative</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/assets/js/supabase-config.js"></script>
 </head>
 <body>
+    <div data-include="header"></div>
 
-  <div data-include="header"></div>
+    <main>
+        <header class="section section--alt">
+            <div class="wrap reveal">
+                <nav class="breadcrumb">
+                    <a href="/">Accueil</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <span>Publications</span>
+                </nav>
+                <h1 class="hero-title">Publications</h1>
+                <p class="hero-text">Livres, revues et rapports de recherche pour approfondir votre culture architecturale.</p>
+            </div>
+        </header>
 
-  <header class="article-header" style="padding-bottom:3rem;">
-    <div class="wrap">
-      <div class="breadcrumb">
-        <a href="index.html">Accueil</a>
-        <span class="breadcrumb__sep">/</span>
-        <span>Publications</span>
-      </div>
-      <span class="eyebrow" style="color:var(--blue);"><span style="background:var(--blue);"></span>La Référence</span>
-      <h1>Publications & Bibliothèque</h1>
-      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Une sélection de livres, revues et manifestes qui comptent. Construire sa culture architecturale sur des bases solides.</p>
-    </div>
-  </header>
+        <section class="section">
+            <div class="wrap">
+                <div class="grid-3 reveal--stagger" id="grid">
+                    <article class="card">
+                        <img src="/assets/img/hero_vitrine.png" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Livre</span>
+                            <h3 class="card-title">Manifeste pour une Ville Bio-inspirée</h3>
+                            <p class="card-text">L'ouvrage de référence sur le biomimétisme urbain.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="/assets/img/conseils_tech.png" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Revue</span>
+                            <h3 class="card-title">Cahiers de l'Architecture #12</h3>
+                            <p class="card-text">Numéro spécial sur les structures légères.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <section class="section" style="background:var(--paper);">
-    <div class="wrap">
-      <div class="grid-4">
-        <div class="card reveal" style="text-align:center;">
-          <div style="aspect-ratio:3/4; background:var(--paper-alt); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:4rem; margin-bottom:1rem;">📚</div>
-          <h4>L'Espace et le Temps</h4>
-          <p style="font-size:0.8rem;">Giedion, 1941</p>
-        </div>
-        <div class="card reveal d1" style="text-align:center;">
-          <div style="aspect-ratio:3/4; background:var(--paper-alt); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:4rem; margin-bottom:1rem;">📘</div>
-          <h4>Vers une architecture</h4>
-          <p style="font-size:0.8rem;">Le Corbusier</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div data-include="newsletter"></div>
+    </main>
 
-  <div data-include="footer"></div>
-  <script src="assets/js/main.js"></script>
+    <div data-include="footer"></div>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

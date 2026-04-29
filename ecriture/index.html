@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/">
+  <!-- Analytics -->
+  <script src="assets/js/analytics.js"></script>
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Réflexions et écrits sur l'espace et la ville — Architecture Créative.">
+  <title>Écriture — Architecture Créative</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Architecture Créative">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Écriture — Architecture Créative">
+  <meta property="og:description" content="Essais, manifestes et réflexions théoriques sur le métier d'architecte.">
+  <meta property="og:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/hero_vitrine.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Écriture — Architecture Créative">
+  <meta name="twitter:description" content="Réflexions et manifestes architecturaux.">
+  <link rel="stylesheet" href="assets/css/main.css?v=204">
+  <link rel="stylesheet" href="assets/css/blog.css?v=204">
+</head>
+<body>
+
+  <div data-include="header"></div>
+
+  <header class="article-header" style="padding-bottom:3rem;">
+    <div class="wrap">
+      <div class="breadcrumb">
+        <a href="/">Accueil</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>Écriture</span>
+      </div>
+      <span class="eyebrow" style="color:rgba(255,100,150,.85);"><span style="background:rgba(255,100,150,.85);"></span>Théorie</span>
+      <h1>Écriture & Réflexions</h1>
+      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Essais, manifestes et prises de position sur l'évolution de la pratique architecturale et urbaine.</p>
+    </div>
+  </header>
+
+  <section class="section" style="background:var(--paper);">
+    <div class="wrap">
+      <div class="grid-3" id="grid">
+        <!-- Les articles seront chargés dynamiquement via Supabase -->
+        <div class="loading-state">Chargement des réflexions...</div>
+      </div>
+    </div>
+  </section>
+
+  <div data-include="footer"></div>
+  <script src="assets/js/main.js?v=207"></script>
+</body>
+</html>

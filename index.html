@@ -4,6 +4,9 @@
   <base href="/">
   <!-- Analytics -->
   <script src="assets/js/analytics.js"></script>
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,210 +23,166 @@
   <meta name="twitter:title" content="Architecture Créative — Blog">
   <meta name="twitter:description" content="Le blog de l'architecture et de l'ingénierie à Douala.">
   <meta name="twitter:image" content="https://architecture-creative.ateliersdepaul.com/assets/img/featured_suka.png">
-  <link rel="stylesheet" href="assets/css/main.css?v=200">
-  <link rel="stylesheet" href="assets/css/blog.css?v=200">
-  <style>
-    /* Force single-line navigation & uppercase */
-    .header__nav-list { flex-wrap: nowrap !important; justify-content: center !important; }
-    .header__nav-list li a { 
-      white-space: nowrap !important; 
-      text-transform: uppercase !important; 
-      padding: 0 0.8rem !important; 
-      font-size: 0.76rem !important;
-    }
-    .header__nav-list li:not(:last-child)::after { margin-left: 0.8rem !important; }
-    
-    /* Force signup button style */
-    .header__btn-cta {
-      display: inline-flex !important;
-      align-items: center !important;
-      font-family: 'Inter', sans-serif !important;
-      font-size: 0.72rem !important;
-      font-weight: 700 !important;
-      color: #ffffff !important;
-      background: #1a3582 !important;
-      padding: 0.42rem 1.1rem !important;
-      border-radius: 5px !important;
-      text-decoration: none !important;
-      white-space: nowrap !important;
-      margin-left: 2rem !important;
-      transition: background 0.2s, transform 0.2s !important;
-      letter-spacing: 0.02em !important;
-    }
-    .header__btn-cta:hover {
-      background: #1d4ed8 !important;
-      transform: translateY(-1px) !important;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css?v=204">
+  <link rel="stylesheet" href="assets/css/blog.css?v=204">
 </head>
 <body>
 
   <div data-include="header"></div>
-<!-- FEATURED HERO — 2026 Split Layout -->
-  <section>
-    <a href="projets/suka-cafe.html" class="featured-hero">
-      <div class="featured-hero__bg">
-        <img src="assets/img/featured_suka.png" alt="SUKA Café interior">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="wrap hero-wrap">
+      <div class="hero-content reveal">
+        <span class="eyebrow">Laboratoire d'idées & revue d'inspiration</span>
+        <h1 class="hero-title">Penser l'architecture, inspirer le futur.</h1>
+        <p class="hero-text">
+          Bienvenue sur Architecture Creative, une plateforme dédiée à l'exploration des formes, des matières et des idées qui façonnent notre environnement. 
+          Nous décryptons les tendances urbaines, analysons les chefs-d'œuvre contemporains et donnons la parole aux visionnaires qui réinventent l'espace de vie de demain. 
+          Découvrez nos dossiers exclusifs, nos entretiens approfondis et nos guides pour nourrir votre passion du bâti.
+        </p>
+        <a href="dossiers/index.html" class="btn btn--primary">
+          Découvrir les dossiers
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
       </div>
-      <div class="featured-hero__content">
-        <div class="featured-hero__label">
-          <span class="eyebrow">À la une</span>
-        </div>
-        <h1 class="featured-hero__title">Anatomie d'une construction : Phénoménologie du SUKA Café</h1>
-        <p class="featured-hero__excerpt">Comment la métaphore de l'arbre et l'héritage tribal redéfinissent l'expérience sociale au cœur de Douala. Une exploration sur la matérialité et la mémoire.</p>
-        <div class="featured-hero__cta">Explorer le dossier</div>
-      </div>
-    </a>
-  </section>
-
-  <!-- CATEGORY STRIP -->
-  <div class="cat-strip-wrap">
-    <div class="wrap">
-      <div class="cat-strip">
-        <a href="index.html" class="cat-pill active">Tous <span class="cat-pill__n">10</span></a>
-        <a href="dossiers/index.html" class="cat-pill">Dossiers <span class="cat-pill__n">Expertise</span></a>
-        <a href="entretiens/index.html" class="cat-pill">Entretiens <span class="cat-pill__n">Réseau</span></a>
-        <a href="guides/index.html" class="cat-pill">Guides <span class="cat-pill__n">Inspiration</span></a>
-        <a href="nouvelles/index.html" class="cat-pill">Nouvelles <span class="cat-pill__n">Le Pouls</span></a>
+      <div class="hero-image reveal" style="transition-delay: 0.2s;">
+        <img src="assets/img/hero_vitrine.png" alt="Architecture Feature Vitrine">
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- DERNIERS ARTICLES -->
+
   <section class="section">
     <div class="wrap">
-      <div class="section-bar">
-        <h2>Dernières publications</h2>
-        <a href="conseils/index.html">Tout voir</a>
+      <div class="section-header reveal">
+        <h2>À la une</h2>
+        <a href="nouvelles/index.html" class="view-all">Voir toutes les nouveautés →</a>
       </div>
       
-      <div class="posts-grid">
-
-        <a href="projets/suka-cafe.html" class="post">
-          <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="assets/img/featured_suka.png" alt="SUKA Café"></div>
-          </div>
-          <div class="post__body">
-            <div class="post__cat">Exploration · Sociologie</div>
-            <h3 class="post__title">Anatomie d'une construction : L'héritage tribal</h3>
-            <p class="post__excerpt">Au-delà du design, comment l'architecture peut servir de pont entre tradition et modernité urbaine.</p>
-            <div class="post__footer">
-              <span class="post__read">Par Paul Boubert · 7 min</span>
-              <span class="post__link">Consulter</span>
+      <div class="grid-4 reveal--stagger" id="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="assets/img/featured_suka.png" alt="Matérialité et lumière" class="card-img">
+          <div class="card-body">
+            <span class="card-tag">Dossier</span>
+            <h3 class="card-title">Matérialité et lumière</h3>
+            <p class="card-text">Explorer comment les matériaux façonnent l'émotion architecturale.</p>
+            <div class="card-footer">
+              <span>12 min de lecture</span>
+              <button class="bookmark-btn" aria-label="Sauvegarder"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
             </div>
           </div>
-        </a>
+        </article>
 
-        <a href="projets/workbox.html" class="post">
-          <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="assets/img/projets/workbox.jpg" alt="Workbox"></div>
-            <div class="post__thumb-icon">📦</div>
-          </div>
-          <div class="post__body">
-            <div class="post__cat">Lab R&D · Modularité</div>
-            <h3 class="post__title">L'Agilité Modulaire : Vers un urbanisme réversible</h3>
-            <p class="post__excerpt">Le conteneur maritime comme cellule de base d'une ville adaptable et économe en ressources.</p>
-            <div class="post__footer">
-              <span class="post__read">Par Paul Boubert · 6 min</span>
-              <span class="post__link">Consulter</span>
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="assets/img/projets/workbox.jpg" alt="Tadao Ando" class="card-img">
+          <div class="card-body">
+            <span class="card-tag">Entretien</span>
+            <h3 class="card-title">Tadao Ando, la simplicité</h3>
+            <p class="card-text">Conversation exclusive avec le maître de l'architecture japonaise.</p>
+            <div class="card-footer">
+              <span>18 min de lecture</span>
+              <button class="bookmark-btn" aria-label="Sauvegarder"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
             </div>
           </div>
-        </a>
+        </article>
 
-        <a href="projets/bicec.html" class="post">
-          <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="assets/img/project_bicec.png" alt="Agence BICEC"></div>
-          </div>
-          <div class="post__body">
-            <div class="post__cat">Exploration · Tertiaire</div>
-            <h3 class="post__title">Analyse : Identité visuelle & Architecture institutionnelle</h3>
-            <p class="post__excerpt">Comment l'espace physique traduit la solidité et la confiance d'une institution financière.</p>
-            <div class="post__footer">
-              <span class="post__read">Par Paul Boubert · 8 min</span>
-              <span class="post__link">Consulter</span>
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="assets/img/project_bicec.png" alt="Lisbonne" class="card-img">
+          <div class="card-body">
+            <span class="card-tag">Guides de la ville</span>
+            <h3 class="card-title">Lisbonne : architecture et paysages</h3>
+            <p class="card-text">Un guide complet des lieux incontournables.</p>
+            <div class="card-footer">
+              <span>15 min de lecture</span>
+              <button class="bookmark-btn" aria-label="Sauvegarder"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
             </div>
           </div>
-        </a>
+        </article>
 
-        <a href="innovation/article-ia.html" class="post">
-          <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="assets/img/innovation_ia.png" alt="Estimation IA"></div>
-          </div>
-          <div class="post__body">
-            <div class="post__cat">Lab R&D · Tech</div>
-            <h3 class="post__title">Intelligence Artificielle & Précision Budgétaire</h3>
-            <p class="post__excerpt">Réflexions sur l'automatisation de l'ingénierie et la réduction de l'incertitude sur les chantiers.</p>
-            <div class="post__footer">
-              <span class="post__read">Équipe R&D · 5 min</span>
-              <span class="post__link">Consulter</span>
+        <!-- Card 4 -->
+        <article class="card">
+          <img src="assets/img/innovation_ia.png" alt="Nouveaux projets" class="card-img">
+          <div class="card-body">
+            <span class="card-tag">Nouvelles</span>
+            <h3 class="card-title">Nouveaux projets remarquables</h3>
+            <p class="card-text">Les réalisations les plus inspirantes de ces derniers mois.</p>
+            <div class="card-footer">
+              <span>8 min de lecture</span>
+              <button class="bookmark-btn" aria-label="Sauvegarder"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
             </div>
           </div>
-        </a>
-
+        </article>
       </div>
     </div>
   </section>
-
-  <!-- FOCUS SECTION (conseils) -->
+  <!-- LATEST BY CATEGORY -->
   <section class="section section--alt">
     <div class="wrap">
-      <div class="section-bar">
-        <h2>Pensées & Vision du monde</h2>
-        <a href="conseils/index.html">Accéder aux archives</a>
+      <div class="section-header reveal">
+        <h2>Parcourir par catégorie</h2>
       </div>
-      
-      <div class="posts-grid--4">
-        
-        <a href="conseils/article-cctp.html" class="post">
-          <div class="post__thumb post__thumb--square">
-            <div class="post__thumb-bg"><img src="assets/img/conseils_tech.png" alt="CCTP et APS"></div>
-          </div>
-          <div class="post__body">
-            <div class="post__cat">Pensées · Technique</div>
-            <h3 class="post__title post__title--sm">La Rigueur Technique comme acte de résistance</h3>
-            <div class="post__footer">
-              <span class="post__read">10 avr. 2026</span>
-              <span class="post__link">Ouvrir</span>
-            </div>
-          </div>
-        </a>
 
-        <a href="conseils/article-manifeste.html" class="post">
-          <div class="post__thumb post__thumb--brand">
-            AC
+      <div class="grid-3 reveal--stagger">
+        <!-- Category 1: Dossiers -->
+        <div class="cat-block">
+          <div class="cat-block__header">
+            <h3 class="cat-block__title">Dossiers</h3>
+            <a href="dossiers/index.html" class="cat-block__more">Tout voir</a>
           </div>
-          <div class="post__body">
-            <div class="post__cat">Pensées · Manifeste</div>
-            <h3 class="post__title post__title--sm">Pourquoi l'Espace influence notre bonheur</h3>
-            <div class="post__footer">
-              <span class="post__read">Manifeste 2026</span>
-              <span class="post__link">Découvrir</span>
+          <article class="card">
+            <img src="assets/img/hero_vitrine.png" alt="Dossier" class="card-img" style="height: 160px;">
+            <div class="card-body">
+              <h4 class="card-title" style="font-size: 0.95rem;">L'avenir des villes durables en 2026</h4>
+              <p class="card-text" style="font-size: 0.8rem;">Analyse prospective sur l'urbanisme écologique.</p>
             </div>
-          </div>
-        </a>
-
-        <!-- Placeholder for next items -->
-        <div class="post post--placeholder">
-          <p>Dossier à venir<br>Réglementation 2026</p>
+          </article>
         </div>
 
-        <div class="post post--placeholder">
-          <p>Dossier à venir<br>Matériaux Durables</p>
+        <!-- Category 2: Entretiens -->
+        <div class="cat-block">
+          <div class="cat-block__header">
+            <h3 class="cat-block__title">Entretiens</h3>
+            <a href="entretiens/index.html" class="cat-block__more">Tout voir</a>
+          </div>
+          <article class="card">
+            <img src="assets/img/projets/workbox.jpg" alt="Entretien" class="card-img" style="height: 160px;">
+            <div class="card-body">
+              <h4 class="card-title" style="font-size: 0.95rem;">Rencontre avec Jean Nouvel</h4>
+              <p class="card-text" style="font-size: 0.8rem;">Une discussion sur la lumière et la matière.</p>
+            </div>
+          </article>
         </div>
 
+        <!-- Category 3: Guides -->
+        <div class="cat-block">
+          <div class="cat-block__header">
+            <h3 class="cat-block__title">Guides</h3>
+            <a href="guides/index.html" class="cat-block__more">Tout voir</a>
+          </div>
+          <article class="card">
+            <img src="assets/img/project_bicec.png" alt="Guide" class="card-img" style="height: 160px;">
+            <div class="card-body">
+              <h4 class="card-title" style="font-size: 0.95rem;">Guide : Architecture de Douala</h4>
+              <p class="card-text" style="font-size: 0.8rem;">Parcours des monuments historiques et modernes.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
+
   <section class="section">
     <div class="wrap">
-      <div class="newsletter-block" id="newsletter">
+      <div class="newsletter-block reveal" id="newsletter">
         <div class="newsletter-block__inner">
           <div>
             <h3>La Lettre d'Inspiration</h3>
             <p>Recevez chaque mois notre veille exclusive sur l'urbanisme, les nouveaux matériaux et l'évolution de nos sociétés. Pas de marketing, juste du savoir.</p>
-            <form class="newsletter-form" onsubmit="this.innerHTML='<p style=color:var(--blue);font-weight:700;>✓ INSCRIPTION CONFIRMÉE</p>';event.preventDefault();">
+            <form class="newsletter-form">
               <input type="email" placeholder="votre@email.com" required>
               <button type="submit" class="btn btn--primary">S'abonner</button>
             </form>
@@ -237,6 +196,9 @@
   </section>
 
   <div data-include="footer"></div>
-<script src="assets/js/main.js"></script>
+
+  <div data-include="mobile-nav"></div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
