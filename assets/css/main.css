@@ -179,8 +179,8 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 }
 
 .logo-icon {
-  width: 44px;
-  height: 32px;
+  width: 52px;
+  height: 48px;
   position: relative;
   display: flex;
   align-items: center;
@@ -190,22 +190,22 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 .logo-icon::after {
   content: '';
   position: absolute;
-  border: 2.2px solid var(--blue);
+  border: 2.8px solid var(--blue);
   background: var(--white);
 }
 
 .logo-icon::before { /* Petit carré gauche */
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   left: 0;
-  top: 10px;
+  top: 18px;
   z-index: 2;
 }
 
 .logo-icon::after { /* Grand carré droit */
-  width: 24px;
-  height: 24px;
-  left: 8px;
+  width: 32px;
+  height: 32px;
+  left: 10px;
   top: 4px;
   z-index: 1;
 }
@@ -214,13 +214,13 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-  padding-left: 4px;
+  padding-left: 8px;
 }
 
 .logo-text__main {
   font-family: var(--f-head);
   font-weight: 900;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   letter-spacing: 0.02em;
   color: #0A1628;
 }
@@ -228,7 +228,7 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 .logo-text__sub {
   font-family: var(--f-head);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 0.05em;
   color: var(--blue);
 }
