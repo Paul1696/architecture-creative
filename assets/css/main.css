@@ -179,43 +179,57 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 }
 
 .logo-icon {
-  width: 32px;
+  width: 44px;
   height: 32px;
-  background: var(--blue);
-  border-radius: var(--r-sm);
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
+.logo-icon::before,
 .logo-icon::after {
   content: '';
   position: absolute;
+  border: 2.2px solid var(--blue);
+  background: var(--white);
+}
+
+.logo-icon::before { /* Petit carré gauche */
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 10px;
+  z-index: 2;
+}
+
+.logo-icon::after { /* Grand carré droit */
+  width: 24px;
+  height: 24px;
+  left: 8px;
   top: 4px;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
-  border: 2px solid var(--white);
-  border-radius: 2px;
+  z-index: 1;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  padding-left: 4px;
 }
 
 .logo-text__main {
   font-family: var(--f-head);
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  color: var(--ink);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: #0A1628;
 }
 
 .logo-text__sub {
   font-family: var(--f-head);
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
   color: var(--blue);
 }
 
