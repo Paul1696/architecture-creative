@@ -7,10 +7,10 @@
 
     <!-- Logo (Center on Mobile, Left on Desktop) -->
     <a href="/" class="logo">
-      <div class="logo-icon"></div>
+      <div class="logo-icon" aria-hidden="true"></div>
       <div class="logo-text">
-        <span>ARCHITECTURE</span>
-        <span>CREATIVE</span>
+        <span class="logo-text__main">ARCHITECTURE</span>
+        <span class="logo-text__sub">CREATIVE</span>
       </div>
     </a>
 
@@ -20,20 +20,25 @@
         <li><a href="/" class="nav-link">Accueil</a></li>
         <li><a href="/projets/" class="nav-link">Architecture</a></li>
         <li><a href="/dossiers/" class="nav-link">Dossiers</a></li>
-        <li><a href="/entretiens/" class="nav-link">Entretiens</a></li>
-        <li><a href="/guides/" class="nav-link">Guides de la ville</a></li>
         <li><a href="/conseils/" class="nav-link">Conseils</a></li>
-        <li><a href="/nouvelles/" class="nav-link">Nouvelles</a></li>
-        <li><a href="/publications/" class="nav-link">Publications</a></li>
-        <li><a href="/ecriture/" class="nav-link">Écriture</a></li>
-        <li><a href="/developpement/" class="nav-link">Développement</a></li>
         <li><a href="/ressources/" class="nav-link">Ressources</a></li>
-        <li><a href="/annuaire/" class="nav-link">Annuaire</a></li>
-        <li><a href="/contact/" class="nav-link">Contact</a></li>
+        <li class="nav-more">
+          <button class="nav-link nav-more__trigger" type="button" aria-haspopup="true">Plus</button>
+          <div class="nav-more__menu">
+            <a href="/entretiens/" class="nav-link">Entretiens</a>
+            <a href="/guides/" class="nav-link">Guides de la ville</a>
+            <a href="/nouvelles/" class="nav-link">Nouvelles</a>
+            <a href="/publications/" class="nav-link">Publications</a>
+            <a href="/ecriture/" class="nav-link">Écriture</a>
+            <a href="/developpement/" class="nav-link">Développement</a>
+            <a href="/annuaire/" class="nav-link">Annuaire</a>
+            <a href="/lexique/" class="nav-link">Lexique</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+          </div>
+        </li>
         <li><a href="/admin/" class="nav-link admin-only hidden">Admin</a></li>
       </ul>
       <div class="nav-auth">
-        <a href="/#newsletter" class="nav-link">S'abonner</a>
         <a href="/profil.html" class="nav-link">Se connecter</a>
         <a href="/profil.html" class="btn btn--primary btn--sm">S'inscrire</a>
       </div>

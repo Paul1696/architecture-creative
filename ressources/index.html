@@ -12,43 +12,72 @@
     <script src="/assets/js/supabase-config.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
+  <div data-include="header"></div>
 
-    <main>
-        <header class="section section--alt">
-            <div class="wrap reveal">
-                <nav class="breadcrumb">
-                    <a href="/">Accueil</a>
-                    <span class="breadcrumb__sep">/</span>
-                    <span>Ressources</span>
-                </nav>
-                <h1 class="hero-title">Ressources</h1>
-                <p class="hero-text">Outils, bibliothèques d'objets et documents techniques pour les professionnels du bâtiment.</p>
-            </div>
-        </header>
+  <header class="article-header" style="background: var(--blue);">
+    <div class="wrap">
+      <div class="breadcrumb">
+        <a href="/">Accueil</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>Ressources</span>
+      </div>
+      <h1 class="hero-title">Bibliothèque Technique</h1>
+      <p class="hero-text" style="color: rgba(255,255,255,0.7); max-width: 600px;">
+        Outils, bibliothèques d'objets BIM et documents de référence pour les professionnels de l'architecture et de la construction.
+      </p>
+    </div>
+  </header>
 
-        <section class="section">
-            <div class="wrap">
-                <div class="grid-3 reveal--stagger" id="grid">
-                    <article class="card">
-                        <img src="/assets/img/innovation_ia.png" class="card-img">
-                        <div class="card-body">
-                            <span class="card-tag">Outil</span>
-                            <h3 class="card-title">Bibliothèque BIM : Matériaux Durables</h3>
-                            <p class="card-text">Plus de 500 textures et objets pour vos projets Revit/ArchiCAD.</p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="/assets/img/conseils_tech.png" class="card-img">
-                        <div class="card-body">
-                            <span class="card-tag">Template</span>
-                            <h3 class="card-title">Kit de Présentation Concours</h3>
-                            <p class="card-text">Mises en page professionnelles pour vos rendus d'architecture.</p>
-                        </div>
-                    </article>
-                </div>
+  <section class="section" style="background: var(--paper-alt);">
+    <div class="wrap">
+      <div class="grid-3 editorial-grid reveal--stagger" id="grid">
+        <article class="post">
+          <div class="post__thumb">
+            <img src="/assets/img/innovation_ia.png" class="post__thumb-img" alt="Bibliothèque BIM">
+            <span class="post__badge cat--ink">BIM / REVIT</span>
+          </div>
+          <div class="post__body">
+            <h3 class="post__title">Bibliothèque de Matériaux Locaux</h3>
+            <p class="post__excerpt">Plus de 50 textures PBR haute résolution basées sur les matériaux disponibles en Afrique Centrale.</p>
+            <div class="post__footer">
+              <span class="post__read">.rfa / .skp</span>
+              <span class="post__link">Télécharger</span>
             </div>
-        </section>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post__thumb">
+            <img src="/assets/img/conseils_tech.png" class="post__thumb-img" alt="Template Concours">
+            <span class="post__badge cat--clay">Template</span>
+          </div>
+          <div class="post__body">
+            <h3 class="post__title">Kit de Rendu : Identité Visuelle</h3>
+            <p class="post__excerpt">Mises en page InDesign et styles de texte pour vos dossiers de candidature aux concours.</p>
+            <div class="post__footer">
+              <span class="post__read">.indd / .pdf</span>
+              <span class="post__link">Télécharger</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post__thumb">
+            <div class="post__thumb-placeholder" style="background: var(--ink);">📐</div>
+            <span class="post__badge cat--moss">Documentation</span>
+          </div>
+          <div class="post__body">
+            <h3 class="post__title">Guide des Normes ERP Cameroun</h3>
+            <p class="post__excerpt">Synthèse illustrée des réglementations de sécurité incendie et accessibilité pour les ERP.</p>
+            <div class="post__footer">
+              <span class="post__read">PDF · 45 pages</span>
+              <span class="post__link">Consulter</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
         <div data-include="newsletter"></div>
     </main>

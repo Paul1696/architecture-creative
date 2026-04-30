@@ -218,6 +218,83 @@ async function renderList() {
       </div>
     </article>
   `).join('');
+
+  renderStats(posts.length);
+}
+
+async function renderStats(postCount) {
+  const statArticles = document.querySelector('#statArticles');
+  const statSubscribers = document.querySelector('#statSubscribers');
+  const statMessages = document.querySelector('#statMessages');
+
+  if (statArticles) statArticles.textContent = postCount;
+
+  try {
+    const [subRes, msgRes] = await Promise.all([
+      supabase.from('newsletter_subscribers').select('id', { count: 'exact', head: true }),
+      supabase.from('contact_messages').select('id', { count: 'exact', head: true })
+    ]);
+
+    if (statSubscribers) statSubscribers.textContent = subRes.count || 0;
+    if (statMessages) statMessages.textContent = msgRes.count || 0;
+    
+    renderActivity();
+  } catch (e) {
+    console.warn('Stats error:', e);
+  }
+}
+
+async function renderActivity() {
+  const feed = document.querySelector('#adminActivityFeed');
+  if (!feed) return;
+
+  try {
+    const [subData, msgData] = await Promise.all([
+      supabase.from('newsletter_subscribers').select('*').order('created_at', { ascending: false }).limit(3),
+      supabase.from('contact_messages').select('*').order('created_at', { ascending: false }).limit(3)
+    ]);
+
+    const activities = [];
+
+    (subData.data || []).forEach(s => {
+      activities.push({
+        type: 'Newsletter',
+        label: s.email,
+        date: new Date(s.created_at),
+        color: 'var(--blue)'
+      });
+    });
+
+    (msgData.data || []).forEach(m => {
+      activities.push({
+        type: 'Contact',
+        label: `${m.first_name} : ${m.subject}`,
+        date: new Date(m.created_at),
+        color: 'var(--clay)'
+      });
+    });
+
+    activities.sort((a, b) => b.date - a.date);
+
+    if (activities.length === 0) {
+      feed.innerHTML = '<p class="admin-empty">Aucune activité récente.</p>';
+      return;
+    }
+
+    feed.innerHTML = activities.slice(0, 5).map(act => `
+      <div style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+          <span style="font-weight: 700; color: ${act.color}; text-transform: uppercase; font-size: 0.7rem;">${act.type}</span>
+          <span style="color: var(--text-muted); font-size: 0.7rem;">${act.date.toLocaleDateString('fr-FR')}</span>
+        </div>
+        <div style="font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${escapeAdminHtml(act.label)}</div>
+      </div>
+    `).join('');
+
+  } catch (e) {
+    console.warn('Activity error:', e);
+    feed.innerHTML = '<p class="admin-empty">Erreur de chargement.</p>';
+  }
 }
 
 /* ── Events ────────────────────────────────────────────────── */

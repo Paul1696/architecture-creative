@@ -30,6 +30,11 @@
 .post-meta--dark .post-meta__sep { color: var(--border); }
 .post-meta--dark .post-meta__cat { color: var(--blue); background: var(--blue-glow); }
 
+/* ── Editorial Accents ────────────────────────────────────────── */
+.cat--clay { color: var(--clay) !important; background: rgba(166, 83, 50, 0.1) !important; }
+.cat--moss { color: var(--moss) !important; background: rgba(100, 122, 82, 0.1) !important; }
+.cat--ink  { color: var(--ink) !important; background: rgba(10, 22, 40, 0.05) !important; }
+
 /* ═══════════════════════════════════════════════════════════
    FEATURED HERO — 2026 Split Layout (ArchDaily)
 ═══════════════════════════════════════════════════════════ */
@@ -979,3 +984,38 @@ main > .section--alt:first-child .breadcrumb a {
     width: 100%;
   }
 }
+
+/* -- PROJECT DETAIL TEMPLATE --------------------------------- */
+.project-hero { padding: 8rem 0 4rem; background: var(--ink); color: var(--white); overflow: hidden; }
+.project-hero__grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+.project-title { font-size: var(--fs-4xl); line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--f-head); }
+.project-subtitle { font-size: var(--fs-lg); color: rgba(255,255,255,0.6); margin-bottom: 3rem; }
+.project-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; }
+.stat-label { display: block; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 0.5rem; }
+.stat-value { display: block; font-size: var(--fs-base); font-weight: 500; }
+.main-image { width: 100%; height: auto; border-radius: var(--r-lg); filter: grayscale(20%); transition: filter 0.5s; }
+.main-image:hover { filter: grayscale(0%); }
+
+.article-grid { display: grid; grid-template-columns: 280px 1fr; gap: 6rem; align-items: start; }
+.article-sidebar { position: sticky; top: 120px; }
+.sidebar-title { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: var(--ink-soft); }
+.sidebar-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+.sidebar-list li { font-size: var(--fs-sm); margin-bottom: 0.75rem; color: var(--ink); display: flex; align-items: center; }
+.sidebar-list li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--blue); margin-right: 12px; }
+
+.article-content { max-width: 720px; }
+.lead { font-size: var(--fs-lg); line-height: 1.6; color: var(--ink); margin-bottom: 3rem; font-weight: 500; }
+.article-content h2 { font-size: var(--fs-2xl); margin: 4rem 0 1.5rem; font-family: var(--f-head); }
+.article-content p { margin-bottom: 1.5rem; color: var(--ink-mid); }
+.article-figure { margin: 4rem 0; }
+.article-figure img { width: 100%; border-radius: var(--r-md); }
+.article-figure figcaption { font-size: var(--fs-xs); color: var(--ink-soft); text-align: center; margin-top: 1rem; font-style: italic; }
+blockquote { font-family: var(--f-head); font-size: var(--fs-xl); font-style: italic; border-left: 4px solid var(--blue); padding: 1rem 0 1rem 2.5rem; margin: 4rem 0; color: var(--blue); }
+.image-gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 4rem 0; }
+.image-gallery-grid img { width: 100%; border-radius: var(--r-md); border: 1px solid var(--border); }
+@media (max-width: 1024px) {
+  .project-hero__grid { grid-template-columns: 1fr; gap: 3rem; }
+  .article-grid { grid-template-columns: 1fr; gap: 4rem; }
+  .article-sidebar { position: static; }
+}
+

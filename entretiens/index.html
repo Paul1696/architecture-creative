@@ -12,43 +12,57 @@
     <script src="/assets/js/supabase-config.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
+  <div data-include="header"></div>
 
-    <main>
-        <header class="section section--alt">
-            <div class="wrap reveal">
-                <nav class="breadcrumb">
-                    <a href="/">Accueil</a>
-                    <span class="breadcrumb__sep">/</span>
-                    <span>Entretiens</span>
-                </nav>
-                <h1 class="hero-title">Entretiens</h1>
-                <p class="hero-text">Rencontres avec les architectes, designers et urbanistes qui façonnent le monde de demain.</p>
-            </div>
-        </header>
+  <header class="article-header" style="background: var(--clay);">
+    <div class="wrap">
+      <div class="breadcrumb">
+        <a href="/">Accueil</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>Entretiens</span>
+      </div>
+      <h1 class="hero-title">Conversations</h1>
+      <p class="hero-text" style="color: rgba(255,255,255,0.8); max-width: 600px;">
+        Rencontres avec les architectes, bâtisseurs et penseurs qui interrogent la pratique spatiale au Cameroun et au-delà.
+      </p>
+    </div>
+  </header>
 
-        <section class="section">
-            <div class="wrap">
-                <div class="grid-3 reveal--stagger" id="grid">
-                    <article class="card">
-                        <img src="/assets/img/projets/workbox.jpg" class="card-img">
-                        <div class="card-body">
-                            <span class="card-tag">Entretien</span>
-                            <h3 class="card-title">Rencontre avec Jean Nouvel</h3>
-                            <p class="card-text">Une discussion exclusive sur la lumière et l'identité architecturale.</p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="/assets/img/featured_suka.png" class="card-img">
-                        <div class="card-body">
-                            <span class="card-tag">Entretien</span>
-                            <h3 class="card-title">L'architecture en Afrique</h3>
-                            <p class="card-text">Conversation sur les nouveaux enjeux du bâti sur le continent.</p>
-                        </div>
-                    </article>
-                </div>
+  <section class="section" style="background: var(--white);">
+    <div class="wrap">
+      <div class="grid-3 editorial-grid reveal--stagger" id="grid">
+        <article class="post">
+          <div class="post__thumb">
+            <img src="/assets/img/projets/suka-interieur.jpg" class="post__thumb-img" alt="Entretien">
+            <span class="post__badge cat--clay">ENTRETIEN</span>
+          </div>
+          <div class="post__body">
+            <h3 class="post__title">La matière comme langage : Rencontre avec les artisans du bois</h3>
+            <p class="post__excerpt">Une discussion sur la transmission des savoir-faire et la réinvention des structures traditionnelles.</p>
+            <div class="post__footer">
+              <span class="post__read">12 min</span>
+              <span class="post__link">Lire</span>
             </div>
-        </section>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post__thumb">
+            <img src="/assets/img/project_bicec.png" class="post__thumb-img" alt="Entretien">
+            <span class="post__badge cat--ink">PERSPECTIVES</span>
+          </div>
+          <div class="post__body">
+            <h3 class="post__title">Urbanisme et Densité : Regards croisés sur Douala</h3>
+            <p class="post__excerpt">Dialogue entre architectes et sociologues sur l'évolution des quartiers péricentraux.</p>
+            <div class="post__footer">
+              <span class="post__read">15 min</span>
+              <span class="post__link">Lire</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
         <div data-include="newsletter"></div>
     </main>

@@ -12,28 +12,30 @@
     <script src="/assets/js/supabase-config.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
+  <div data-include="header"></div>
 
-    <main>
-        <header class="section section--alt">
-            <div class="wrap reveal">
-                <nav class="breadcrumb">
-                    <a href="/">Accueil</a>
-                    <span class="breadcrumb__sep">/</span>
-                    <span>Dossiers</span>
-                </nav>
-                <h1 class="hero-title">Dossiers</h1>
-                <p class="hero-text">Analyses approfondies, dossiers thématiques et explorations techniques sur l'architecture contemporaine.</p>
-            </div>
-        </header>
+  <header class="article-header" style="background: var(--ink);">
+    <div class="wrap">
+      <div class="breadcrumb">
+        <a href="/">Accueil</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>Dossiers</span>
+      </div>
+      <h1 class="hero-title">Dossiers de Recherche</h1>
+      <p class="hero-text" style="color: rgba(255,255,255,0.6); max-width: 600px;">
+        Analyses approfondies, dossiers thématiques et explorations techniques. Une documentation rigoureuse pour comprendre les enjeux de la ville et de la construction.
+      </p>
+    </div>
+  </header>
 
-        <section class="section">
-            <div class="wrap">
-                <div class="grid-3 reveal--stagger" id="grid">
-                    <!-- Les articles seront chargés dynamiquement ici -->
-                </div>
-            </div>
-        </section>
+  <section class="section" style="background: var(--white);">
+    <div class="wrap">
+      <div class="grid-3 editorial-grid reveal--stagger" id="grid">
+        <!-- Les articles seront chargés dynamiquement via Supabase -->
+        <div class="blog-loading">Chargement des dossiers...</div>
+      </div>
+    </div>
+  </section>
 
         <div data-include="newsletter"></div>
     </main>

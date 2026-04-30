@@ -71,6 +71,23 @@
 
     <section class="section">
       <div class="wrap admin-layout">
+        
+        <!-- Stats Dashboard -->
+        <div class="admin-dashboard reveal" style="grid-column: 1 / -1; margin-bottom: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div class="admin-panel" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Articles Publiés</div>
+            <div id="statArticles" style="font-size: 2rem; font-weight: 800; color: var(--ink);">--</div>
+          </div>
+          <div class="admin-panel" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Abonnés Newsletter</div>
+            <div id="statSubscribers" style="font-size: 2rem; font-weight: 800; color: var(--blue);">--</div>
+          </div>
+          <div class="admin-panel" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Messages Contacts</div>
+            <div id="statMessages" style="font-size: 2rem; font-weight: 800; color: var(--clay);">--</div>
+          </div>
+        </div>
+
         <form class="admin-panel" id="adminPostForm">
           <div class="admin-panel__head">
             <h2>Nouvel article</h2>
@@ -142,10 +159,17 @@
 
         <aside class="admin-panel admin-side">
           <div class="admin-panel__head">
-            <h2>Articles Supabase</h2>
+            <h2>Statut Articles</h2>
             <span id="postCount">0</span>
           </div>
           <div class="admin-list" id="adminPostList"></div>
+
+          <div class="admin-panel__head" style="margin-top: 2rem;">
+            <h2>Dernières Activités</h2>
+          </div>
+          <div id="adminActivityFeed" style="font-size: 0.85rem;">
+            <p class="admin-empty">Chargement des activités...</p>
+          </div>
         </aside>
       </div>
     </section>

@@ -29,135 +29,111 @@
 <body>
 
   <div data-include="header"></div>
-<header class="article-header" style="padding-bottom:3rem;">
+  
+  <header class="article-header">
     <div class="wrap">
       <div class="breadcrumb">
         <a href="/">Accueil</a>
         <span class="breadcrumb__sep">/</span>
         <span>Architecture</span>
       </div>
-      <h1>Projets Architecture</h1>
-      <p style="color:rgba(255,255,255,.5);max-width:520px;font-size:1rem;margin-top:.5rem;">Une déconstruction de l'espace bâti — du brief philosophique à la matérialité finale.</p>
+      <h1>Archives des Projets</h1>
+      <p class="hero-text" style="color: rgba(255,255,255,0.6); max-width: 600px;">
+        Une déconstruction systématique de l'espace bâti — du brief conceptuel à la matérialité finale. Analyse technique et documentation photographique des projets réalisés à Douala.
+      </p>
     </div>
   </header>
 
-  <section class="section" style="background:var(--paper);">
+  <section class="section" style="background: var(--white);">
     <div class="wrap">
-      <div class="filters reveal">
-        <button class="filter active" data-filter="all">Tous</button>
+      <div class="filters reveal" style="margin-bottom: 4rem;">
+        <button class="filter active" data-filter="all">Tous les projets</button>
         <button class="filter" data-filter="amenagement">Phénoménologie</button>
-        <button class="filter" data-filter="erp">Institutionnel</button>
-        <button class="filter" data-filter="conception">Typologies</button>
+        <button class="filter" data-filter="erp">Tertiaire</button>
+        <button class="filter" data-filter="conception">Logement</button>
         <button class="filter" data-filter="brand">Identité</button>
       </div>
 
-      <div class="grid-3" id="grid">
+      <div class="grid-3 editorial-grid reveal--stagger" id="grid">
 
-        <a href="/projets/suka-cafe.html" class="post reveal d1" data-cat="amenagement brand" style="text-decoration:none;">
+        <a href="/projets/suka-cafe.html" class="post reveal" data-cat="amenagement brand">
           <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="/assets/img/projets/suka-facade-jour.png" alt="SUKA Café"></div>
-            <div class="post__thumb-grid"></div>
-            <div class="post__thumb-icon">☕</div>
-            <span class="post__badge post__badge--cas">Phénoménologie · Identité</span>
+            <img src="/assets/img/projets/suka-facade-jour.png" alt="SUKA Café" class="post__thumb-img" loading="lazy" width="1200" height="750">
+            <span class="post__badge cat--clay">Étude de cas</span>
           </div>
           <div class="post__body">
-            <div class="post__date">Par Paul Boubert · Bonamoussadi, Douala</div>
-            <div class="post__title">Anatomie d'une construction : Phénoménologie du SUKA Café</div>
-            <p class="post__excerpt">Exploration de la structure bois de 4m et de la métaphore de l'arbre comme pilier d'un espace de rencontre.</p>
+            <div class="post__meta">Douala · 2023</div>
+            <h2 class="post__title">SUKA Café : Phénoménologie et structure bois</h2>
+            <p class="post__excerpt">Exploration de la structure bois de 4m et de la métaphore de l'arbre comme pilier d'un espace de rencontre urbain.</p>
             <div class="post__footer">
               <span class="post__read">⏱ 7 min · 130 m²</span>
-              <span class="post__link">Consulter →</span>
+              <span class="post__link">Consulter</span>
             </div>
           </div>
         </a>
 
-        <a href="/projets/bicec.html" class="post reveal d2" data-cat="erp" style="text-decoration:none;">
+        <a href="/projets/bicec.html" class="post reveal" data-cat="erp">
           <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="/assets/img/project_bicec.png" alt="Agence BICEC"></div>
-            <div class="post__thumb-grid"></div>
-            <div class="post__thumb-icon">🏦</div>
-            <span class="post__badge post__badge--cas">Institutionnel · Tertiaire</span>
+            <img src="/assets/img/project_bicec.png" alt="Agence BICEC" class="post__thumb-img" loading="lazy" width="1200" height="750">
+            <span class="post__badge cat--ink">Institutionnel</span>
           </div>
           <div class="post__body">
-            <div class="post__date">Par Paul Boubert · Bafoussam</div>
-            <div class="post__title">Analyse : Identité institutionnelle & Rigueur spatiale</div>
-            <p class="post__excerpt">Comment l'architecture traduit la stabilité d'une agence bancaire à travers la charte graphique et technique.</p>
+            <div class="post__meta">Bafoussam · 2022</div>
+            <h2 class="post__title">Identité BICEC : Rigueur spatiale et confiance publique</h2>
+            <p class="post__excerpt">Comment l'architecture traduit la stabilité d'une agence bancaire à travers une charte technique rigoureuse.</p>
             <div class="post__footer">
-              <span class="post__read">⏱ 8 min</span>
-              <span class="post__link">Consulter →</span>
+              <span class="post__read">⏱ 8 min · Tertiaire</span>
+              <span class="post__link">Consulter</span>
             </div>
           </div>
         </a>
 
-        <a href="/projets/workbox.html" class="post reveal d3" data-cat="conception" style="text-decoration:none;">
+        <a href="/projets/workbox.html" class="post reveal" data-cat="conception">
           <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="/assets/img/projets/workbox.jpg" alt="Workbox"></div>
-            <div class="post__thumb-grid"></div>
-            <div class="post__thumb-icon">📦</div>
-            <span class="post__badge post__badge--cas">Typologies · Modulaire</span>
+            <img src="/assets/img/projets/workbox.jpg" alt="Workbox" class="post__thumb-img" loading="lazy" width="1200" height="750">
+            <span class="post__badge cat--moss">Typologie</span>
           </div>
           <div class="post__body">
-            <div class="post__date">Par Paul Boubert · Douala</div>
-            <div class="post__title">L'Agilité Modulaire : Vers un urbanisme réversible</div>
+            <div class="post__meta">Douala · 2024</div>
+            <h2 class="post__title">Workbox : Vers un urbanisme modulaire et réversible</h2>
             <p class="post__excerpt">Déconstruction du concept de bureau en conteneur maritime comme réponse à la densité urbaine éphémère.</p>
             <div class="post__footer">
-              <span class="post__read">⏱ 6 min · Acier & Verre</span>
-              <span class="post__link">Consulter →</span>
+              <span class="post__read">⏱ 6 min · Acier</span>
+              <span class="post__link">Consulter</span>
             </div>
           </div>
         </a>
 
-        <a href="#" class="post post--soon reveal" data-cat="erp conception" style="text-decoration:none;">
+        <a href="/projets/totem-bonapriso.html" class="post reveal" data-cat="conception">
           <div class="post__thumb">
-            <div class="post__thumb-bg" style="background:linear-gradient(135deg,#1a2a4a 0%,#1e3a5f 100%);"></div>
-            <div class="post__thumb-grid"></div>
-            <div class="post__thumb-icon">🏥</div>
-            <span class="post__badge post__badge--soon">En cours</span>
+            <img src="/assets/img/projets/totem.jpg" alt="Totem Bonapriso" class="post__thumb-img">
+            <span class="post__badge cat--moss">Typologie</span>
           </div>
           <div class="post__body">
-            <div class="post__date">En cours · Akwa</div>
-            <div class="post__title">Clinique privée — Flux sanitaires</div>
-            <p class="post__excerpt">Mise en conformité et amélioration du confort patient. Publication prévue après livraison.</p>
-            <div class="post__footer">
-              <span class="post__read">⏱ À venir</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="post post--soon reveal d1" data-cat="amenagement brand" style="text-decoration:none;">
-          <div class="post__thumb">
-            <div class="post__thumb-bg" style="background:linear-gradient(135deg,#3a1a2d 0%,#5c1e4a 100%);"></div>
-            <div class="post__thumb-grid"></div>
-            <div class="post__thumb-icon">🛍️</div>
-            <span class="post__badge post__badge--soon">Bientôt</span>
-          </div>
-          <div class="post__body">
-            <div class="post__date">Makepe · Douala</div>
-            <div class="post__title">Boutique mode — Concept store</div>
-            <p class="post__excerpt">120 m² de retail : mise en scène des produits, éclairage d'accentuation, identité visuelle complète.</p>
-            <div class="post__footer">
-              <span class="post__read">⏱ À venir</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="/projets/totem-bonapriso.html" class="post reveal d2" data-cat="conception" style="text-decoration:none;">
-          <div class="post__thumb">
-            <div class="post__thumb-bg"><img src="/assets/img/projets/totem.jpg" alt="Totem Bonapriso"></div>
-            <div class="post__thumb-grid"></div>
-            <div class="post__thumb-icon">🏢</div>
-            <span class="post__badge post__badge--cas">Typologies · Densité</span>
-          </div>
-          <div class="post__body">
-            <div class="post__date">Par Paul Boubert · Bonapriso, Douala</div>
-            <div class="post__title">Le Totem de Bonapriso : Une réflexion sur la densité</div>
-            <p class="post__excerpt">Analyse d'une verticalité extrême sur 108 m². Comment la contrainte foncière génère une nouvelle esthétique.</p>
+            <div class="post__meta">Douala · 2021</div>
+            <h2 class="post__title">Totem Bonapriso : Verticalité extrême sur 108 m²</h2>
+            <p class="post__excerpt">Analyse d'un projet R+5 où la contrainte foncière génère une nouvelle esthétique de la densité.</p>
             <div class="post__footer">
               <span class="post__read">⏱ 7 min · R+5</span>
-              <span class="post__link">Consulter →</span>
+              <span class="post__link">Consulter</span>
             </div>
           </div>
         </a>
+
+        <div class="post post--soon reveal" data-cat="erp">
+          <div class="post__thumb">
+            <div class="post__thumb-placeholder" style="background: var(--ink);">🏥</div>
+            <span class="post__badge">En cours</span>
+          </div>
+          <div class="post__body">
+            <div class="post__meta">Akwa · Douala</div>
+            <h2 class="post__title">Clinique privée — Flux sanitaires</h2>
+            <p class="post__excerpt">Mise en conformité et amélioration du confort patient. Publication prévue après livraison.</p>
+            <div class="post__footer">
+              <span class="post__read">À venir</span>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
